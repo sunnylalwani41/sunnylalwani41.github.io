@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    display: flex;
+    
+    
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    
+}
+
+.nav-list{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    
+    /* margin-left: 2%; */
+    justify-content: center;
+    
+}
+.logo img{
+    width: 30%;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    
+}
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+    
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-list li a:hover{
+    color: rgb(78, 141, 141);
+}
+.rightNav{
+    width: 30%;
+    justify-content: flex-end;
+    display: flex;
+}
+.rightNav div{
+    max-width: 37%;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: blueviolet;
+    padding: 20px 25px;
+    
+    border-radius: 15px;
+    margin-right: 3%;
+}
+.rightNav a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    
+}
+.background{
+    background: rgba(0, 0, 0, 0.7) url('../img/logo.gif');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.firstSection{
+    height: 100vh;
+
+}
+
+.main-box{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.firstHalf{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.hand{
+    width: 60px;
+}
+.big-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    /* color: white; */
+    margin-bottom: 15px;
+}
+.small-text{
+    font-family: monospace;
+    font-size: 22px;
+    /* color: white; */
+    line-height: 150%;
+}
+.secondHalf{
+    width: 50%;
+}
+.secondHalf img{
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+.connect{
+    margin-top: 5%;
+    
+}
+.contact button{
+    max-width: 37%;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact a:last-child{
+    margin-left: 3%;
+}
