@@ -149,16 +149,70 @@
     max-width: 90%;
     margin: auto;
 }
-.section img{
-    width: 70%;
-    border-radius: 23px;
+.thumb-img{
+    position: relative;
+    
 }
+.thumb-img img{
+    position: relative;
+    /* height: 100%; */
+    width: 70%;
+    z-index: -1;
+    border-radius: 23px;
+    animation: animateUser 6s linear infinite;
+}
+@keyframes animateUser {
+    50%{
+        width: 80%;
+        /* top: -90px; */
+    }
+    
+}
+/* .section img{
+    width: ;
+    
+} */
 .black{
     color: black;
 }
 .parag{
     padding: 0% 2.5%;
+    overflow: hidden;
 }
 .left{
     flex-direction: row-reverse;
+}
+
+
+.icon{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.icon img{
+    width: 80%;
+    display: block;
+
+    
+}
+.flex{
+    display: flex;
+
+}
+.center{
+    text-align: center;
+}
+.linearAnimate{
+    animation: moveForward 6s linear infinite;
+    overflow: hidden;
+    animation-direction: alternate;
+}
+@keyframes moveForward {
+    0%{
+        transform: translateX(20%);
+    }
+    /* 50%{
+        transform: translateY(100%);
+    } */
 }
