@@ -225,3 +225,11 @@
     align-items: center;
 }
 
+.gitHubStats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gitHubStats img{
+    display: block;
+}
