@@ -185,7 +185,7 @@
 
 
 .icon{
-    width: 30%;
+    width: 15%;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -210,9 +210,18 @@
 }
 @keyframes moveForward {
     0%{
-        transform: translateX(20%);
+        transform: translateX(30%);
     }
     /* 50%{
         transform: translateY(100%);
     } */
 }
+
+.paragStats{
+    
+    margin-top: 3%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+

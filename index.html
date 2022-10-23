@@ -90,9 +90,24 @@
         </div>
         
     </section>
-    <div>
-        
+    <div class="parag">
+        <p class="big-text black center">GitHub Calendar</p>
+        <hr>
+        <div class="calendar">
+            <!-- Loading stuff -->
+            Loading the data just for you.
+        </div>
     </div>
+    <div class="paragStats">
+        <p class="big-text black center">GitHub Stats</p>
+        <hr>
+        <div class="gitHubStats">
+        <a href="https://github.com/sunnylalwani41"><img src="https://github-readme-stats.vercel.app/api?username=sunnylalwani41" alt=""></a>
+        <a href="https://github.com/sunnylalwani41"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&langs_count=8" alt=""></a>
+    </div>
+    </div>
+    
+    
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -107,4 +122,15 @@
         backSpeed : 80,
         backDelay : 1500
     })
+    GitHubCalendar(".calendar", "sunnylalwani41");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "sunnylalwani41", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".calendar", "sunnylalwani41", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${username}`)
+       }
+    }).then(r => r.text())
 </script>
