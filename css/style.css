@@ -347,6 +347,7 @@
     border-radius: 15px;
     
 }
+
 .touch{
     display: flex;
     margin: auto;
@@ -362,4 +363,7 @@
 .conn:hover{
     background-color: white;
     border: 3px solid black;
+}
+.calendar{
+    width: 100vw;
 }
