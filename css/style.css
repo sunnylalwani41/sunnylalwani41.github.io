@@ -4,6 +4,9 @@
     margin: 0px;
     padding: 0px;
 }
+html{
+    scroll-behavior: smooth;
+}
 .navbar{
     display: flex;
     
@@ -45,8 +48,9 @@
 .nav-list li a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
+    font-family: system-ui;
 }
 .nav-list li a:hover{
     color: rgb(78, 141, 141);
@@ -57,7 +61,7 @@
     display: flex;
 }
 .rightNav div{
-    max-width: 37%;
+    /* max-width: 37%; */
     font-weight: bold;
     font-size: 18px;
     background-color: blueviolet;
@@ -72,11 +76,26 @@
     text-align: center;
     
 }
+.burger{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 15px;
+    cursor: pointer;
+}
+.line{
+    width: 32px;
+    background-color: white;
+    margin: 5px 3px;
+    height: 4px;
+
+}
 .background{
     background: rgba(0, 0, 0, 0.7) url('../img/logo.gif');
     background-size: cover;
     background-blend-mode: darken;
 }
+
 .firstSection{
     height: 100vh;
 
@@ -86,9 +105,11 @@
     width: 70%;
     margin: auto;
     display: flex;
-    height: 80%;
+    padding:0% 2%;
+    /* height: 80%; */
     justify-content: center;
     align-items: center;
+    
 }
 .firstHalf{
     width: 50%;
@@ -115,8 +136,8 @@
     width: 50%;
 }
 .secondHalf img{
-    width: 100%;
-    
+    width: 494px;
+    margin-left: 30px;
     border-radius: 30px;
 }
 .connect{
@@ -143,7 +164,8 @@
 }
 .section{
     display: flex;
-    height: 500px;
+    /* height: 500px; */
+    padding: 3% 0%;
     align-items: center;
     justify-content: space-evenly;
     max-width: 90%;
@@ -157,14 +179,14 @@
 .thumb-img img{
     position: relative;
     /* height: 100%; */
-    width: 70%;
+    width: 300px;
     z-index: -1;
     border-radius: 23px;
-    animation: animateUser 6s linear infinite;
+    /* animation: animateUser 6s linear infinite; */
 }
 @keyframes animateUser {
     50%{
-        width: 80%;
+        width: 270px;
         /* top: -90px; */
     }
     
@@ -174,7 +196,7 @@
     color: black;
 }
 .parag{
-    padding: 0% 2.5%;
+    padding: 0% 3%;
     overflow: hidden;
 }
 .left{
@@ -193,10 +215,13 @@
     width: 15%;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
+    margin: 20px 30px;
+    
 }
 .icon img{
-    width: 80%;
+    width: 180px;
+    
     display: block;
 
     
@@ -212,10 +237,11 @@
     animation: moveForward 6s linear infinite;
     overflow: hidden;
     animation-direction: alternate;
+    
 }
 @keyframes moveForward {
     0%{
-        transform: translateX(30%);
+        transform: translateX(30px);
     }
     /* 50%{
         transform: translateY(100%);
@@ -224,7 +250,7 @@
 
 .paragStats{
     
-    margin-top: 3%;
+    /* margin-top: 3%; */
     display: grid;
     justify-content: center;
     align-items: center;
@@ -244,8 +270,6 @@
     display: grid;
     gap: 0.5%;
     grid-template-columns: repeat(3, 1fr);
-    
-    margin: 3% 0%;
 }
 
 .cart{
@@ -259,6 +283,7 @@
     padding: 5% 2%;
     text-align: center;
     color: white;
+    /* margin-bottom: 35%; */
     
 }
 .cart img{
@@ -334,7 +359,7 @@
 .footer{
     background-color: black;
     margin-top: 5%;
-    width: 100vw;
+    width: 96vw;
     padding: 2%;
 }
 .cyan{
@@ -364,6 +389,17 @@
     background-color: white;
     border: 3px solid black;
 }
+
 .calendar{
     width: 100vw;
+}
+/* .topMargin{
+    margin-top: 10%;
+} */
+.paddingTopBottom{
+    padding: 5% 0%;
+}
+
+.conn:hover .conn>a{
+    color: black;
 }

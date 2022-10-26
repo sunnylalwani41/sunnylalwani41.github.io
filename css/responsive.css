@@ -1,0 +1,95 @@
+
+@media only screen and (max-width:1119px){
+    .main-box{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0%;
+    }
+    .secondHalf img {
+        margin: auto;
+        width: 80%;
+        
+    }
+    .firstHalf {
+        width: 82%;
+        text-align: left;
+        padding: 20px;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        height: 570px;
+        flex-direction: column;
+        transition: all 0.7s ease-out;
+    }
+    .rightNav div a{
+        text-align: center;
+    }
+    .rightNav {
+        justify-content: center;
+    }
+    .rightNav div{
+        text-align: center;
+        
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav{
+        height: 72px;
+    }
+    .v-nav{
+        opacity: 0;
+    }
+    .section{
+        flex-direction: column-reverse;
+    }
+    .linearAnimate {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .parag{
+        padding: 0%;
+    }
+    .icon img{
+        width: 140px;
+    }
+    .project{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:815px){
+    .gitHubStats {
+        flex-direction: column;
+    }
+    .gitHubStats img{
+        width: 100%;
+    }
+    .project{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .touch{
+        display: grid;
+        grid-template-columns: repeat(2,130px);
+    }
+}
+@media only screen and (max-width:407px){
+    .linearAnimate {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .thumb-img img{
+        width: 150px;
+    }
+    .footer{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .touch{
+        /* width: 100%; */
+        display: grid;
+        grid-template-columns: repeat(1,130px);
+    }
+    
+}
