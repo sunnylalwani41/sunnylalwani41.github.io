@@ -1,4 +1,8 @@
-
+@media only screen and (max-width:1210px){
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 @media only screen and (max-width:1119px){
     .main-box{
         flex-direction: column-reverse;

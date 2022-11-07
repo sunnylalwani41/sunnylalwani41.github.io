@@ -215,12 +215,12 @@ html{
     width: 15%;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
     margin: 20px 30px;
     
 }
 .icon img{
-    width: 180px;
+    width: 150px;
     
     display: block;
 
@@ -402,4 +402,8 @@ html{
 
 .conn:hover .conn>a{
     color: black;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
