@@ -269,7 +269,7 @@ html{
 .project{
     display: grid;
     gap: 0.5%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .cart{
