@@ -22,7 +22,7 @@ navbar=document.querySelector(".navbar");
 navList=document.querySelector(".nav-list");
 rightNav=document.querySelector(".rightNav");
 burger.addEventListener("click", ()=>{
-    navbar.classList.toggle("h-nav");
+    // navbar.classList.toggle("h-nav");
     navList.classList.toggle("v-nav");
     rightNav.classList.toggle("v-nav");
     
