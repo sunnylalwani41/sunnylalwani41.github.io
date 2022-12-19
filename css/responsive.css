@@ -42,6 +42,7 @@
     }
     .h-nav{
         height: 72px;
+        
     }
     .v-nav{
         opacity: 0;
@@ -96,4 +97,119 @@
         grid-template-columns: repeat(1,130px);
     }
     
+}
+
+@media only screen and (max-width:192px){
+ 
+    .h-nav{
+       
+        width: 110%;
+    }
+    .navbar{
+        width: 108%;
+    }
+}
+@media only screen and (max-width:184px){
+ 
+    .h-nav{
+       
+        width: 110%;
+    }
+    .navbar{
+        width: 110%;
+    }
+}
+@media only screen and (max-width:179px){
+    .footer{
+    
+        width: 114%;
+    }
+    
+}
+@media only screen and (max-width:179px){
+    
+    .h-nav{
+       
+        width: 119%;
+    }
+    
+}
+@media only screen and (max-width:172px){
+    
+    .h-nav{
+       
+        width: 119%;
+    }
+    .navbar{
+        width: 117%;
+    }
+}
+
+@media only screen and (max-width:158px){
+    .footer{
+    
+        width: 115%;
+    }
+    .h-nav{
+       
+        width: 120%;
+    }
+}
+
+@media only screen and (max-width:157px){
+    .footer{
+    
+        width: 120%;
+    }
+    .h-nav{
+       
+        width: 125%;
+    }
+    .navbar{
+        width: 123%;
+    }
+}
+
+@media only screen and (max-width:132px){
+    .footer{
+    
+        width: 125%;
+    }
+    .h-nav{
+       
+        width: 140%;
+    }
+    .navbar{
+        width: 134%;
+    }
+}
+
+@media only screen and (max-width:124px){
+    .footer{
+    
+        width: 130%;
+    }
+    .navbar{
+        width: 139%;
+    }
+}
+
+@media only screen and (max-width:110px){
+    .footer{
+    
+        width: 145%;
+    }
+    .navbar{
+        width: 155%;
+    }
+}
+
+@media only screen and (max-width:98px){
+    .h-nav{
+       
+        width: 140%;
+    }
+    .navbar{
+        width: 170%;
+    }
 }

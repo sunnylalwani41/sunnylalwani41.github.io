@@ -165,7 +165,7 @@ html{
 .section{
     display: flex;
     /* height: 500px; */
-    padding: 3% 0%;
+    padding: 3% 5%;
     align-items: center;
     justify-content: space-evenly;
     max-width: 90%;
@@ -179,7 +179,7 @@ html{
 .thumb-img img{
     position: relative;
     /* height: 100%; */
-    width: 300px;
+    width: 350px;
     z-index: -1;
     border-radius: 23px;
     /* animation: animateUser 6s linear infinite; */
@@ -202,6 +202,9 @@ html{
 .left{
     display: flex;
     flex-direction: row-reverse;
+}
+.paddingBottom11{
+    margin-bottom: 11.5%;
 }
 .justify{
     text-align: justify;
@@ -358,7 +361,7 @@ html{
 }
 .footer{
     background-color: black;
-    margin-top: 5%;
+    
     width: 96vw;
     padding: 2%;
 }
@@ -393,11 +396,15 @@ html{
 .calendar{
     width: 100vw;
 }
+.multiText{
+    color: rgb(237, 199, 152);
+    font-weight: 500;
+}
 /* .topMargin{
     margin-top: 10%;
 } */
 .paddingTopBottom{
-    padding: 5% 0%;
+    padding: 7% 0%;
 }
 
 .conn:hover .conn>a{

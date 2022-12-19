@@ -1,5 +1,5 @@
 let typingEffect=new Typed(".multiText", {
-    strings : ["Long-Life Learner","Long-Life Learner", "aspiring Java-Backend Developer at Masai School", "Coder", "Problem Solver"],
+    strings : ["Long-Life Learner","Long-Life Learner", "passionate Full-Stack Web Developer at Masai School", "an expert in Java-Backend Developer and I attend the Masai School.","Coder", "Problem Solver"],
     loop: true,
     typeSpeed : 100,
     backSpeed : 80,
@@ -22,7 +22,7 @@ navbar=document.querySelector(".navbar");
 navList=document.querySelector(".nav-list");
 rightNav=document.querySelector(".rightNav");
 burger.addEventListener("click", ()=>{
-    // navbar.classList.toggle("h-nav");
+    navbar.classList.toggle("h-nav");
     navList.classList.toggle("v-nav");
     rightNav.classList.toggle("v-nav");
     
