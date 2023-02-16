@@ -121,10 +121,16 @@ html{
 }
 .big-text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 45px;
+    font-size: 49px;
     font-weight: bold;
     color: white;
     margin-bottom: 15px;
+}
+.medium-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 31px;
+    color: white;
+    line-height: 150%;
 }
 .small-text{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -213,21 +219,34 @@ html{
     color: #92bcb5;
     
 }
-
+.outerBox{
+    background-color: #92bcb5;
+    border-radius: 30px;
+    padding: 20px 10px;
+    align-content: space-around;
+    text-align: center;
+} 
 .icon{
-    width: 15%;
+    width: 60%;
     justify-content: center;
-    align-items: center;
-    /* padding: 20px; */
+    align-content: center;
+    padding: 20px 20px;
     margin: 20px 30px;
+    background-color: white;
+    border-radius: 25px 25px;
     
 }
+.text{
+    font-size: 31px;
+ 
+}
 .icon img{
-    width: 150px;
     
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-
     
+    width: 150px;
 }
 .flex{
     display: flex;
@@ -236,12 +255,12 @@ html{
 .center{
     text-align: center;
 }
-.linearAnimate{
-    animation: moveForward 6s linear infinite;
+ /* .linearAnimate{
+    animation: moveForward 10s linear infinite;
     overflow: hidden;
     animation-direction: alternate;
     
-}
+}  */
 @keyframes moveForward {
     0%{
         transform: translateX(30px);
@@ -413,4 +432,6 @@ html{
 .grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    justify-content: center;
 }
