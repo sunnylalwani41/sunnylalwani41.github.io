@@ -79,6 +79,51 @@
         grid-template-columns: repeat(2,130px);
     }
 }
+@media only screen and (max-width:574px){
+    .grid{
+        gap: 15px;
+    }
+    .icon img{
+    
+      
+        width: 110px;
+    }
+    .icon {
+    
+        padding: 18px;
+        width: 55%;
+    }
+    .outerBox{
+        background-color: #92bcb5;
+        border-radius: 30px;
+        padding: 15px 15px;
+        align-content: space-around;
+        text-align: center;
+    } 
+}
+
+@media only screen and (max-width:497px){
+    
+    
+  
+    .outerBox{
+       
+        padding: 15px 5px;
+       
+    } 
+}
+@media only screen and (max-width:432px){
+    
+    .outerBox{
+       
+        padding: 15px 0px;
+       
+    } 
+    .text{
+        font-size: 29px;
+    }
+    
+}
 @media only screen and (max-width:407px){
     .linearAnimate {
         display: grid;
@@ -95,6 +140,9 @@
         /* width: 100%; */
         display: grid;
         grid-template-columns: repeat(1,130px);
+    }
+    .text{
+        font-size: 27px;
     }
     
 }

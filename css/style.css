@@ -220,7 +220,7 @@ html{
     
 }
 .outerBox{
-    background-color: #92bcb5;
+    background-color: black;
     border-radius: 30px;
     padding: 20px 10px;
     align-content: space-around;
@@ -238,7 +238,17 @@ html{
 }
 .text{
     font-size: 31px;
- 
+    color: white;
+}
+/* hr{
+    margin-bottom: 15px;
+} */
+.outerBox:hover{
+    background-color: #92bcb5;
+
+}
+.outerBox:hover .text{
+    color: black;
 }
 .icon img{
     
@@ -246,7 +256,7 @@ html{
     margin-right: auto;
     display: block;
     
-    width: 150px;
+    width: 130px;
 }
 .flex{
     display: flex;
@@ -431,7 +441,8 @@ html{
 }
 .grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     justify-content: center;
+    
 }
