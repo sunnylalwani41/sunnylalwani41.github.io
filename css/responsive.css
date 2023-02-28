@@ -60,6 +60,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .firstSection{
+        height: 125vh;
+    }
     .parag{
         padding: 0%;
     }
@@ -69,10 +72,11 @@
     .project{
         grid-template-columns: repeat(2, 1fr);
     }
+    .paddingBottom11{
+        margin-bottom: 1.5%;
+    }
 }
-/* @media only screen and (max-width:990px){
-    
-} */
+
 @media only screen and (max-width:815px){
     .gitHubStats {
         flex-direction: column;
@@ -83,6 +87,10 @@
     .project{
         grid-template-columns: repeat(1, 1fr);
     }
+    .paddingBottom11{
+        margin-bottom: 17.5%;
+    }
+    
     .touch{
         display: grid;
         grid-template-columns: repeat(2,130px);
@@ -94,7 +102,7 @@
         height: 125px;
     }
     .firstSection{
-        height: 112vh;
+        height: 125vh;
     }
 }
 
@@ -139,7 +147,7 @@
         height: 170px;
     }
     .firstSection{
-        width: 102vw;
+        height: 116vh;
 
     }
 }
@@ -175,19 +183,24 @@
     .text{
         font-size: 27px;
     }
+    .firstSection{
+        height: 135vh;
+
+    }
+}
+
+@media only screen and (max-width:415px){
+    #dynamicText{
+        height: 188px;
+    }
     
 }
 
-@media only screen and (max-width:435px){
-    #dynamicText{
-        height: 215px;
-    }
-    .firstSection{
-        height: 116vh;
-
+@media only screen and (max-width:400px){
+    .projMargin{
+        margin-bottom: 23.5%;
     }
 }
-
 
 @media only screen and (max-width:356px){
     .contact{
@@ -197,8 +210,8 @@
         
     }
     .firstSection{
-        height: 130vh;
-        width: 101%;
+        height: 160vh;
+        width: 101vw;
     }
 }
 
@@ -207,7 +220,7 @@
         height: 222px;
     }
     .firstSection{
-        height: 144vh;
+        height: 160vh;
 
     }
 }
@@ -240,27 +253,36 @@
    .firstSection{
     
     width: 101vw;
-    height: 148vh;
+    height: 167vh;
    }
    
    
    
 }
-@media only screen and (max-width:214px){
-    .firstSection{
-        width: 103%;
-        height: 170vh;
-    }
+
+@media only screen and (max-width:229px){
+
     #dynamicText{
-        height: 360px;
+        height: 368px;
+    }
+    .firstSection{
+        height: 182vh;
     }
 }
+
 @media only screen and (max-width:214px){
     .h-nav{
         width: 103vw;
     }
     .footer{
         width: 98%;
+    }
+    .firstSection{
+        width: 103%;
+        height: 200vh;
+    }
+    #dynamicText{
+        height: 360px;
     }
 }
 

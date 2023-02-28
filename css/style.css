@@ -220,7 +220,7 @@ a{
     flex-direction: row-reverse;
 }
 .paddingBottom11{
-    margin-bottom: 11.5%;
+    margin-bottom: 1.5%;
 }
 .justify{
     text-align: justify;
@@ -422,15 +422,7 @@ a{
     padding: 1%;
     justify-content: space-around;
 }
-.conn a{
-    color: #92bcb5;
-    text-decoration: none;
-    font-weight: bold;
-}
-.conn:hover{
-    background-color: white;
-    border: 3px solid black;
-}
+
 
 .calendar{
     width: 100vw;
@@ -445,14 +437,36 @@ a{
 .paddingTopBottom{
     padding: 7% 0%;
 }
-
-.conn:hover .conn>a{
-    color: black;
-}
 .grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     justify-content: center;
     
+}
+
+.footerImage{
+    width: 30px;
+}
+.conn+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 5px;
+    text-decoration: none;
+    color: #92bcb5;
+}
+a .conn{
+    color: #92bcb5;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+.conn:hover{
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+}
+.text2:hover{
+    color: white;
 }
