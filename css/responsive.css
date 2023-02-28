@@ -4,6 +4,12 @@
     }
 }
 @media only screen and (max-width:1119px){
+    #dynamicText{
+        height: 66px;
+    }
+    /* .contact{
+        margin-bottom: 5%;
+    } */
     .main-box{
         flex-direction: column-reverse;
         width: 100%;
@@ -64,6 +70,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* @media only screen and (max-width:990px){
+    
+} */
 @media only screen and (max-width:815px){
     .gitHubStats {
         flex-direction: column;
@@ -79,6 +88,17 @@
         grid-template-columns: repeat(2,130px);
     }
 }
+
+@media only screen and (max-width:715px){
+    #dynamicText{
+        height: 125px;
+    }
+    .firstSection{
+        height: 112vh;
+    }
+}
+
+
 @media only screen and (max-width:574px){
     .grid{
         gap: 15px;
@@ -102,14 +122,26 @@
 }
 
 @media only screen and (max-width:497px){
-    
-    
-  
     .outerBox{
        
         padding: 15px 5px;
        
     } 
+}
+@media only screen and (max-width:442px){
+    .h-nav{
+        height: 72px;
+        width: 101vw;
+    }
+}
+@media only screen and (max-width:435px){
+    #dynamicText{
+        height: 170px;
+    }
+    .firstSection{
+        width: 102vw;
+
+    }
 }
 @media only screen and (max-width:432px){
     
@@ -133,7 +165,7 @@
     }
     .footer{
         flex-wrap: wrap;
-        width: 100%;
+        width: 95%;
     }
     .touch{
         /* width: 100%; */
@@ -145,6 +177,94 @@
     }
     
 }
+
+@media only screen and (max-width:435px){
+    #dynamicText{
+        height: 215px;
+    }
+    .firstSection{
+        height: 116vh;
+
+    }
+}
+
+
+@media only screen and (max-width:356px){
+    .contact{
+        grid-template-columns: repeat(1, 1fr);
+        
+        display: grid;
+        
+    }
+    .firstSection{
+        height: 130vh;
+        width: 101%;
+    }
+}
+
+@media only screen and (max-width:343px){
+    #dynamicText{
+        height: 222px;
+    }
+    .firstSection{
+        height: 144vh;
+
+    }
+}
+
+
+@media only screen and (max-width:294px){
+    .footer{
+        width: 97%;
+    }
+}
+
+@media only screen and (max-width:273px){
+    #dynamicText{
+        height: 235px;
+    }
+    
+}
+
+@media only screen and (max-width:262px){
+    .tech img{
+        width: 8%;
+    }
+    #dynamicText{
+        height: 278px;
+    }
+    
+   .paddingBottom11{
+    margin-bottom: 19.5%;
+   }
+   .firstSection{
+    
+    width: 101vw;
+    height: 148vh;
+   }
+   
+   
+   
+}
+@media only screen and (max-width:214px){
+    .firstSection{
+        width: 103%;
+        height: 170vh;
+    }
+    #dynamicText{
+        height: 360px;
+    }
+}
+@media only screen and (max-width:214px){
+    .h-nav{
+        width: 103vw;
+    }
+    .footer{
+        width: 98%;
+    }
+}
+
+
 
 @media only screen and (max-width:192px){
  

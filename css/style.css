@@ -150,21 +150,31 @@ html{
     margin-top: 5%;
     
 }
-
-.contact button{
-    max-width: 37%;
-    cursor: pointer;
+#dynamicText{
+    height: 125px;
+}
+a{
+    text-decoration: none;
+}
+.contact{
+    display: flex;
+}
+.contact a div{
+    
     margin-top: 5%;
     font-weight: bold;
     font-size: 22px;
+    cursor: pointer;
     background-color: blueviolet;
+    border-radius: 15px;
     text-align: center;
     padding: 20px;
     color: white;
-    border-radius: 15px;
-    border: none;
+    /* border: none; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
+
 .contact a:last-child{
     margin-left: 3%;
 }
