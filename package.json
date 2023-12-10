@@ -1,7 +1,7 @@
 {
   "name": "title",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,8 +14,12 @@
   "homepage": "https://github.com/sunnylalwani41/sunnylalwani41.github.io#readme",
   "dependencies": {
     "add-subtract-date": "^1.0.15",
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "days": "^1.1.1",
     "elly": "^1.1.11",
+    "express": "^4.18.2",
     "fillo": "^1.0.13",
     "formatoid": "^1.2.4",
     "github-calendar": "^2.3.1",
@@ -27,6 +31,5 @@
     "regex-escape": "^3.4.10",
     "sliced": "^1.0.1"
   },
-  "devDependencies": {},
   "description": ""
 }
