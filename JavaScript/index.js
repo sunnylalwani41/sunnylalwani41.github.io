@@ -11,11 +11,12 @@ GitHubCalendar(".calendar", "sunnylalwani41");
 GitHubCalendar(".calendar", "sunnylalwani41", { responsive: true });
 
 // Use a proxy
-GitHubCalendar(".calendar", "sunnylalwani41", {
-   proxy (username) {
-     return fetch(`https://your-proxy.com/github?user=${username}`)
-   }
-}).then(r => r.text())
+fetch('https://api.github.com/users/<username>/contributions', {
+    headers: {
+        'Authorization': 'token <your_GitHub_token>'
+    }
+})
+.then(response => response.json()).then(r => r.text())
 
 burger=document.querySelector(".burger");
 navbar=document.querySelector(".navbar");
@@ -27,3 +28,8 @@ burger.addEventListener("click", ()=>{
     rightNav.classList.toggle("v-nav");
     
 })
+
+
+.then(data => {
+    // Process the contribution data
+});
