@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+const options = {
+  method:  'post',
+  url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
+  headers: {
+    'accept': 'application/json',
+    'Content-Type' : 'application/json',
+    'X-VERIFY' : 'bcb57e100c09472d84c238da848aa466d9a242f199dfa006b5f0e1ad46c48ad6###1'
+    },
+     data: {request : 'ewoJIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUIiwKCSJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiREE0MTcwNjc4MjQ1MTI1NUlORSIsCgkibWVyY2hhbnRVc2VySWQiOiAiTVVJRDQ1NjEyMyIsCgkiYW1vdW50IjogMTAwMCwKCSJyZWRpcmVjdFVybCI6ICJodHRwczovL3N1bm55bGFsd2FuaTQxLmdpdGh1Yi5pby8iLAoJInJlZGlyZWN0TW9kZSI6ICJSRURJUkVDVCIsCgkiY2FsbGJhY2tVcmwiOiAiaHR0cHM6Ly9zdW5ueWxhbHdhbmk0MS5naXRodWIuaW8vIiwKCSJtb2JpbGVOdW1iZXIiOiA5Nzg2NTQzMjExLAoJInBheW1lbnRJbnN0cnVtZW50IjogewogICAgICAgICAgICAgICJ0eXBlIjogIlBBWV9QQUdFIgoJfQp9'}
+    };
+        
+  axios
+    .request(options)
+      .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+    </script>
+</body>
+
+</html>
