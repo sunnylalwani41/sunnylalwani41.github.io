@@ -2,78 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js"></script>
+
 </head>
-  <input type="number" placeholder="Amount" id="amount"/>
+<form>
+
+  <input type="number" placeholder="Amount" id="amount" />
+  <input type="submit" value="Submit" onclick="handleData(event)">
+</form>
+
+
 <body>
-    <script>
-      
-      const { salt_key, merchant_id } = require("./secret.json");
-      const amount = document.getElementById("amount");
-      
-      console.log("amount", amount);
+  <script>
+    async function fetchSecret() {
+      try {
+        const response = await fetch('./secret.json');
+        const secretData = await response.json();
+        return secretData;
+      } catch (error) {
+        console.error('Error fetching secret.json:', error);
+        throw error;
+      }
+    }
 
-      const data = {
-            merchantId: merchant_id,
-            merchantTransactionId: "DA4"+Date.now()+"INE",
-            merchantUserId: "MUID456123",
-            amount: 1000,
-            redirectUrl: "https://sunnylalwani41.github.io/",
-            redirectMode: "REDIRECT",
-            callbackUrl: "https://sunnylalwani41.github.io/",
-            mobileNumber: 8888888888,
-            paymentInstrument: {
-              type: "PAY_PAGE"
-            }
+    // Function to handle the logic after fetching the secret data
+    async function handleData(event) {
+      event.preventDefault();
+      try {
+        const { merchant_id, salt_key } = await fetchSecret();
+        const amount = document.getElementById("amount").value;
+
+        const data = {
+          merchantId: merchant_id,
+          merchantTransactionId: "DA4" + Date.now() + "INE",
+          merchantUserId: "MUID456123",
+          amount: amount * 100,
+          redirectUrl: "https://sunnylalwani41.github.io/",
+          redirectMode: "REDIRECT",
+          callbackUrl: "https://sunnylalwani41.github.io/",
+          mobileNumber: 8888888888,
+          paymentInstrument: {
+            type: "PAY_PAGE"
+          }
         };
+        console.log("data", data);
 
-        console.log("option", option);
-        
         const payload = JSON.stringify(data);
-        
-       const base64Encoded= Buffer.from(payload).toString('base64');
+        const base64Encoded = btoa(payload);
+        const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + salt_key;
+        // let string = JSON.stringify(updateBase64Encoded);
+        // const sha256Hash = sha256(string);
+        const sha256Hash = sha256(updateBase64Encoded);
+        const checksum = sha256Hash + '###1';
 
-        const updateBase64Encoded = base64Encoded + '/pg/v1/pay'+salt_key;
-        const sha256 = crypto.createHash('sha256').update(updateBase64Encoded).digest('hex');
-        const checksum = sha256 + '###1';
+        console.log(checksum);
 
         const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
         const options = {
-            method: 'POST',
-            url: prod_URL,
-            headers: {
-                'accept': 'application/json',
-                'Content-Type': 'application/json',
-                'X-VERIFY': checksum
-            },
-            data: {
-                request: base64Encoded
-            }
+          method: 'POST',
+          url: prod_URL,
+          headers: {
+            'accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-VERIFY': checksum
+          },
+          data: {
+            request: base64Encoded
+          }
         };
-
-// const options = {
-//   method:  'post',
-//   url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
-//   headers: {
-//     'accept': 'application/json',
-//     'Content-Type' : 'application/json',
-//     'X-VERIFY' : 'bcb57e100c09472d84c238da848aa466d9a242f199dfa006b5f0e1ad46c48ad6###1'
-//     },
-//      data: {request : 'ewoJIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUIiwKCSJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiREE0MTcwNjc4MjQ1MTI1NUlORSIsCgkibWVyY2hhbnRVc2VySWQiOiAiTVVJRDQ1NjEyMyIsCgkiYW1vdW50IjogMTAwMCwKCSJyZWRpcmVjdFVybCI6ICJodHRwczovL3N1bm55bGFsd2FuaTQxLmdpdGh1Yi5pby8iLAoJInJlZGlyZWN0TW9kZSI6ICJSRURJUkVDVCIsCgkiY2FsbGJhY2tVcmwiOiAiaHR0cHM6Ly9zdW5ueWxhbHdhbmk0MS5naXRodWIuaW8vIiwKCSJtb2JpbGVOdW1iZXIiOiA5Nzg2NTQzMjExLAoJInBheW1lbnRJbnN0cnVtZW50IjogewogICAgICAgICAgICAgICJ0eXBlIjogIlBBWV9QQUdFIgoJfQp9'}
-//     };
-        
-  axios
-    .request(options)
-      .then(function (response) {
+        console.log(options);
+        axios
+          .request(options)
+          .then(function (response) {
             console.log(response.data);
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-    </script>
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      } catch (error) {
+        console.log('Error handling data:', error);
+      }
+    }
+
+    // const data = {
+    //       merchantId: merchant_id,
+    //       merchantTransactionId: "DA4"+Date.now()+"INE",
+    //       merchantUserId: "MUID456123",
+    //       amount: 1000,
+    //       redirectUrl: "https://sunnylalwani41.github.io/",
+    //       redirectMode: "REDIRECT",
+    //       callbackUrl: "https://sunnylalwani41.github.io/",
+    //       mobileNumber: 8888888888,
+    //       paymentInstrument: {
+    //         type: "PAY_PAGE"
+    //       }
+    //   };
+    //   console.log("data", data);
+
+
+
+    // const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
+    // const options = {
+    //   method: 'POST',
+    //   url: prod_URL,
+    //   headers: {
+    //     'accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //     'X-VERIFY': checksum
+    //   },
+    //   data: {
+    //     request: base64Encoded
+    //   }
+    // };
+  </script>
 </body>
 
 </html>
