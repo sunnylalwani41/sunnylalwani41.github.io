@@ -26,46 +26,16 @@ const newPayment = async (req, res) => {
         const express = require('express');
         const router = express.Router();
         router.use(express.json());
-        const { salt_key, merchant_id } = require("./secret.json");
+        
         const cors = require('cors'); 
 
         // const amount =req.body.amount;
         // console.log("amount",amount);
-        const data = {
-            merchantId: merchant_id,
-            merchantTransactionId: "DA4"+Date.now()+"INE",
-            merchantUserId: "MUID456123",
-            amount: 1000,
-            redirectUrl: "https://sunnylalwani41.github.io/",
-            redirectMode: "REDIRECT",
-            callbackUrl: "https://sunnylalwani41.github.io/",
-            mobileNumber: req.body.number,
-            paymentInstrument: {
-              type: "PAY_PAGE"
-            }
-        };
-        const payload = JSON.stringify(data);
-        
-       const base64Encoded= Buffer.from(payload).toString('base64');
-
-        const updateBase64Encoded = base64Encoded + '/pg/v1/pay'+salt_key;
-        const sha256 = crypto.createHash('sha256').update(updateBase64Encoded).digest('hex');
-        const checksum = sha256 + '###1';
         
         
-        const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
-        const options = {
-            method: 'POST',
-            url: prod_URL,
-            headers: {
-                'accept': 'application/json',
-                'Content-Type': 'application/json',
-                'X-VERIFY': checksum
-            },
-            data: {
-                request: base64Encoded
-            }
-        };
+        
+        
+        
 
         axios.request(options).then(function (response) {
             console.log(response.data)
