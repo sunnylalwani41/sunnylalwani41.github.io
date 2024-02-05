@@ -34,7 +34,7 @@
       event.preventDefault();
       try {
         const { merchant_id, salt_key } = await fetchSecret();
-        const amount = document.getElementById("amount").value;
+        const amount = +document.getElementById("amount").value;
 
         const data = {
           merchantId: merchant_id,
@@ -49,11 +49,25 @@
             type: "PAY_PAGE"
           }
         };
+        // const data = {
+        //   merchantId: "PGTESTPAYUAT",
+        //   merchantTransactionId: "DA4" + Date.now() + "INE",
+        //   merchantUserId: "MUID456123",
+        //   amount: amount * 100,
+        //   redirectUrl: "https://sunnylalwani41.github.io/",
+        //   redirectMode: "REDIRECT",
+        //   callbackUrl: "https://sunnylalwani41.github.io/",
+        //   mobileNumber: 8888888888,
+        //   paymentInstrument: {
+        //     type: "PAY_PAGE"
+        //   }
+        // };
         console.log("data", data);
 
         const payload = JSON.stringify(data);
         const base64Encoded = btoa(payload);
         const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + salt_key;
+        // const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
         // let string = JSON.stringify(updateBase64Encoded);
         // const sha256Hash = sha256(string);
         const sha256Hash = sha256(updateBase64Encoded);
@@ -61,6 +75,7 @@
 
         console.log(checksum);
 
+        // const prod_URL = "https://api-preprod.phonepe.com/apis/hermes";
         const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
         const options = {
           method: 'POST',
@@ -74,7 +89,9 @@
             request: base64Encoded
           }
         };
+
         console.log(options);
+
         axios
           .request(options)
           .then(function (response) {
@@ -83,7 +100,8 @@
           .catch(function (error) {
             console.log(error);
           });
-      } catch (error) {
+      }
+      catch (error) {
         console.log('Error handling data:', error);
       }
     }
