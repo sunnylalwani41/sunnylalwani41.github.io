@@ -48,7 +48,7 @@
     let mobile = document.getElementById("mobile").value;
     let name = document.getElementById("name").value;
 
-    axios.post("http://192.168.1.104:5000/api/payment", {
+    axios.post("http://localhost:5000/api/payment", {
       'amount': amount,
       'mobile': mobile,
       'name': name
