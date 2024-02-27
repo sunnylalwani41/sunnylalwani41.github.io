@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js"></script>
-
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  -->
 </head>
 <form>
 
@@ -33,63 +33,85 @@
     function handleData(event) {
       event.preventDefault();
       // try {
-        // const { merchant_id, salt_key } = await fetchSecret();
-        const amount = +document.getElementById("amount").value;
+      // const { merchant_id, salt_key } = await fetchSecret();
+      const amount = +document.getElementById("amount").value;
 
-        const data = {
-          merchantId: 'DATTATRAYONLINE',
-          merchantTransactionId: "DA4" + Date.now() + "INE",
-          merchantUserId: "MUID456123",
-          amount: amount * 100,
-          redirectUrl: "https://sunnylalwani41.github.io/",
-          redirectMode: "REDIRECT",
-          callbackUrl: "https://sunnylalwani41.github.io/",
-          mobileNumber: 8888888888,
-          paymentInstrument: {
-            type: "PAY_PAGE"
-          }
-        };
-        // const data = {
-        //   merchantId: "PGTESTPAYUAT",
-        //   merchantTransactionId: "DA4" + Date.now() + "INE",
-        //   merchantUserId: "MUID456123",
-        //   amount: amount * 100,
-        //   redirectUrl: "https://sunnylalwani41.github.io/",
-        //   redirectMode: "REDIRECT",
-        //   callbackUrl: "https://sunnylalwani41.github.io/",
-        //   mobileNumber: 8888888888,
-        //   paymentInstrument: {
-        //     type: "PAY_PAGE"
-        //   }
-        // };
-        console.log("data", data);
+      const data = {
+        merchantId: 'DATTATRAYONLINE',
+        merchantTransactionId: "DA4" + Date.now() + "INE",
+        merchantUserId: "MUID456123",
+        amount: amount * 100,
+        redirectUrl: "https://sunnylalwani41.github.io/",
+        redirectMode: "REDIRECT",
+        callbackUrl: "https://sunnylalwani41.github.io/",
+        mobileNumber: 8888888888,
+        paymentInstrument: {
+          type: "PAY_PAGE"
+        }
+      };
+      // const data = {
+      //   merchantId: "PGTESTPAYUAT",
+      //   merchantTransactionId: "DA4" + Date.now() + "INE",
+      //   merchantUserId: "MUID456123",
+      //   amount: amount * 100,
+      //   redirectUrl: "https://sunnylalwani41.github.io/",
+      //   redirectMode: "REDIRECT",
+      //   callbackUrl: "https://sunnylalwani41.github.io/",
+      //   mobileNumber: 8888888888,
+      //   paymentInstrument: {
+      //     type: "PAY_PAGE"
+      //   }
+      // };
+      console.log("data", data);
 
-        const payload = JSON.stringify(data);
-        const base64Encoded = btoa(payload);
-        const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '2cb0fb0e-8789-4db5-9b53-e9f9c6a8e812';
-        // const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
-        // let string = JSON.stringify(updateBase64Encoded);
-        // const sha256Hash = sha256(string);
-        const sha256Hash = sha256(updateBase64Encoded);
-        const checksum = sha256Hash + '###1';
+      const payload = JSON.stringify(data);
+      const base64Encoded = btoa(payload);
+      const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '2cb0fb0e-8789-4db5-9b53-e9f9c6a8e812';
+      // const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
+      // let string = JSON.stringify(updateBase64Encoded);
+      // const sha256Hash = sha256(string);
+      const sha256Hash = sha256(updateBase64Encoded);
+      const checksum = sha256Hash + '###1';
 
-        console.log(checksum);
+      console.log(checksum);
 
 
-        const options = {
-          method: 'post',
-          headers: {
-            'accept': 'application/json',
-            'Content-Type': 'application/json',
-            'X-VERIFY': checksum
-          },
-          body: JSON.stringify({ request: base64Encoded })
-        };
+      const options = {
+        method: 'post',
+        headers: {
+          'accept': 'application/json',
+          'Content-Type': 'application/json',
+          'X-VERIFY': checksum
+        },
+        body: JSON.stringify({ request: base64Encoded })
+      };
 
-        fetch('https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay', options)
-          .then(response => response.json())
-          .then(response => console.log(response))
-          .catch(err => console.error(err));
+      fetch('https://api.phonepe.com/apis/hermes', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+
+
+    //   const settings = {
+    //     async: true,
+    //     crossDomain: true,
+    //     url: 'https://api.phonepe.com/apis/hermes/pg/v1/pay',
+    //     method: 'post',
+    //     headers: {
+    //       'accept': 'application/json',
+    //       'Content-Type': 'application/json',
+    //       'X-VERIFY': checksum
+    //     },
+    //     processData: false,
+    //     data: JSON.stringify({ request: base64Encoded })
+    // };
+
+    // $.ajax(settings).done(function (response) {
+    //   console.log(response);
+    // })
+    // .fail(function (jqXHR, textStatus, errorThrown) {
+    //     console.error('Error:', textStatus, errorThrown);
+    // });
         // const prod_URL = "https://api-preprod.phonepe.com/apis/hermes";
         // const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
         // const options = {
