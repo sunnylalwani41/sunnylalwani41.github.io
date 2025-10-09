@@ -56,7 +56,7 @@
     .section{
         flex-direction: column-reverse;
     }
-    .linearAnimate {
+    .linearAnimate{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -80,9 +80,6 @@
 @media only screen and (max-width:815px){
     .gitHubStats {
         flex-direction: column;
-    }
-    .gitHubStats img{
-        width: 100%;
     }
     .project{
         grid-template-columns: repeat(1, 1fr);

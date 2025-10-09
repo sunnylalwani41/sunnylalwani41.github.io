@@ -208,9 +208,6 @@ a{
     
 }
 
-.black{
-    color: black;
-}
 .parag{
     padding: 0% 3%;
     overflow: hidden;
@@ -260,6 +257,11 @@ a{
 .outerBox:hover .text{
     color: black;
 }
+
+.black{
+    color: black;
+}
+
 .icon img{
     
     margin-left: auto;
@@ -290,24 +292,26 @@ a{
     } */
 }
 
-.paragStats{
-    
-    /* margin-top: 3%; */
-    display: grid;
+.paragStats {
+    text-align: center;
+    display: block;
     justify-content: center;
-    align-items: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(119px, auto)); */
+    width: 80%;
+    margin: auto;
 }
 
-.gitHubStats{
+.gitHubStats {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
 }
+
 .gitHubStats img{
+    max-width: 100%;
+    height: auto;
     display: block;
-    
 }
+
 .project{
     display: grid;
     gap: 0.5%;
@@ -352,7 +356,7 @@ a{
 
 .tech{
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     justify-content: center;
     color: #92bcb5;
 }
@@ -425,7 +429,7 @@ a{
 
 
 .calendar{
-    width: 100vw;
+    width: 90%;
 }
 .multiText{
     color: rgb(237, 199, 152);
@@ -469,4 +473,34 @@ a .conn{
 }
 .text2:hover{
     color: white;
+}
+
+.left-margin{
+    margin-left: 4%;
+}
+
+.experience {
+    text-align: left;
+  border-bottom: 1px dashed #bbb;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.experience:last-child {
+  border-bottom: none; /* removes line after the last one */
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width:767px) {
+
+    .github_stats {
+        width: auto;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* grid-template-columns: repeat(auto-fit, minmax(119px, auto)); */
+        /* grid-template-columns: repeat(1 ,2fr); */
+    }
+
 }

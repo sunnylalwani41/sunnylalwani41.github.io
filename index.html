@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
     <link rel="shortcut icon" href="./img/logo.gif" type="image/x-icon">
@@ -20,7 +21,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills"> Skills</a></li>
-
+            <li><a href="#experience"> Experience</a></li>
             <li><a href="#project"> Project</a></li>
 
             <li><a href="#contact">Contact</a></li>
@@ -150,12 +151,6 @@
                     <h2 class="text">JavaScript</h2>
                 </div>
 
-
-
-
-
-
-
                 <div class="outerBox">
                     <div class="icon">
                         <img src="./img/Python.png" alt="Python">
@@ -163,9 +158,12 @@
                     <h2 class="text">Python</h2>
                 </div>
 
-
-
-
+                <div class="outerBox">
+                    <div class="icon">
+                        <img src="./img/xml_photo.jpg" alt="XML">
+                    </div>
+                    <h2 class="text">XML</h2>
+                </div>
 
             </div>
 
@@ -173,8 +171,6 @@
         </div>
 
     </section>
-
-
 
 
     <section class="section" id="tools">
@@ -272,29 +268,76 @@
                     <h2 class="text">GitHub</h2>
                 </div>
 
+                <div class="outerBox">
+                    <div class="icon">
+                        <img src="./img/jaspersoft.png" alt="Jaspersoft">
+                    </div>
+                    <h2 class="text">Jaspersoft</h2>
+                </div>
+
             </div>
 
         </div>
 
     </section>
 
-    <section class="section">
-
-
-    </section>
-    <section class="section">
-        <div class="paragStats">
-            <p class="big-text black center">GitHub Stats</p>
+    <section class="section" id="experience">
+        <div class="parag">
+            <p class="big-text black center">Experience</p>
             <hr>
-            <div class="gitHubStats">
-                <a href="https://github.com/sunnylalwani41"><img
-                        src="https://github-readme-stats.vercel.app/api?username=sunnylalwani41" alt="GitHub Stats"></a>
-                <a href="https://github.com/sunnylalwani41"><img
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&langs_count=8"
-                        alt="GitHub Stats"></a>
+            <div class="experience">
+                <h2 class="text black">Sunbasedata LLC, FL, USA</h2>
+                <p class="small-text black">Java Developer</p>
+                <p class="small-text black">09/2024 to 10/2025</p>
+                <p class="small-text black">Job Role:</p>
+                <ul class="small-text black left-margin">
+                    <li>Work with team members.</li>
+                    <li>Track project progress.</li>
+                    <li>Write backend API code and MySQL queries.</li>
+                    <li>Prepare project reports.</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h2 class="text black">Digital Add World, Jaipur</h2>
+                <p class="small-text black">Java Developer</p>
+                <p class="small-text black">11/2023 to 09/2024</p>
+                <p class="small-text black">Job Role:</p>
+                <ul class="small-text black left-margin">
+                    <li>Distribute the project work among the team member.</li>
+                    <li>Track the project process and deploy the project in cloud.</li>
+                    <li>Write code for backend and frontend.</li>
+                    <li>Prepare the report for project.</li>
+                </ul>
             </div>
         </div>
     </section>
+
+        <section class="section">
+            <div class="paragStats">
+                <p class="big-text black center">GitHub Stats</p>
+                <hr>
+                <div class="gitHubStats">
+                        <a href="https://github.com/sunnylalwani41"><img
+                                src="https://github-readme-stats.vercel.app/api?username=sunnylalwani41" alt="GitHub Stats"></a>
+        
+                        <a href="https://github.com/sunnylalwani41"><img
+                                src="https://github-readme-streak-stats.herokuapp.com?user=sunnylalwani41&show_icons=true"
+                                alt="GitHub Stats"></a>
+        
+                        <a href="https://github.com/sunnylalwani41"><img
+                                src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&langs_count=8"
+                                alt="GitHub Stats"></a>
+                </div>
+            </div>
+            
+    </section>
+    <section class="section">
+            <div id="calendar" class="calendar react-activity-calendar">
+                <!-- this is the div where your calander will apear -->
+            </div>
+    </section>
+
     <section class="section" id="project">
         <div class="parag center topMargin">
             <p class="big-text black">Project</p>
@@ -465,99 +508,15 @@
 
 </body>
 
-</html>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
+<script>
+    GitHubCalendar(".calendar", "sunnylalwani41");
+    GitHubCalendar(".calendar", "sunnylalwani41", { responsive: true });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="./JavaScript/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js"></script>
-<script>
-    async function fetchSecret() {
-        try {
-            const response = await fetch('./secret.json');
-            const secretData = await response.json();
-            return secretData;
-        } catch (error) {
-            console.error('Error fetching secret.json:', error);
-            throw error;
-        }
-    }
 
-    // Function to handle the logic after fetching the secret data
-    async function handleData(event) {
-        event.preventDefault();
-        try {
-            const { merchant_id, salt_key } = await fetchSecret();
-            const amount = +document.getElementById("amount").value;
+</html>
 
-            const data = {
-                merchantId: merchant_id,
-                merchantTransactionId: "DA4" + Date.now() + "INE",
-                merchantUserId: "MUID456123",
-                amount: amount * 100,
-                redirectUrl: "https://sunnylalwani41.github.io/",
-                redirectMode: "REDIRECT",
-                callbackUrl: "https://sunnylalwani41.github.io/",
-                mobileNumber: 8888888888,
-                paymentInstrument: {
-                    type: "PAY_PAGE"
-                }
-            };
-            // const data = {
-            //   merchantId: "PGTESTPAYUAT",
-            //   merchantTransactionId: "DA4" + Date.now() + "INE",
-            //   merchantUserId: "MUID456123",
-            //   amount: amount * 100,
-            //   redirectUrl: "https://sunnylalwani41.github.io/",
-            //   redirectMode: "REDIRECT",
-            //   callbackUrl: "https://sunnylalwani41.github.io/",
-            //   mobileNumber: 8888888888,
-            //   paymentInstrument: {
-            //     type: "PAY_PAGE"
-            //   }
-            // };
-            console.log("data", data);
-
-            const payload = JSON.stringify(data);
-            const base64Encoded = btoa(payload);
-            const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + salt_key;
-            // const updateBase64Encoded = base64Encoded + '/pg/v1/pay' + '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
-            // let string = JSON.stringify(updateBase64Encoded);
-            // const sha256Hash = sha256(string);
-            const sha256Hash = sha256(updateBase64Encoded);
-            const checksum = sha256Hash + '###1';
-
-            console.log(checksum);
-
-            // const prod_URL = "https://api-preprod.phonepe.com/apis/hermes";
-            const prod_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
-            const options = {
-                method: 'POST',
-                url: prod_URL,
-                headers: {
-                    'accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'X-VERIFY': checksum
-                },
-                data: {
-                    request: base64Encoded
-                }
-            };
-
-            console.log(options);
-
-            axios
-                .request(options)
-                .then(function (response) {
-                    console.log(response.data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
-        catch (error) {
-            console.log('Error handling data:', error);
-        }
-    }
-</script>
