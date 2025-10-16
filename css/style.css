@@ -257,30 +257,36 @@ a{
 .outerBox{
     background-color: black;
     border-radius: 30px;
-    padding: 20px 10px;
+    padding: 15px 15px;
     align-content: space-around;
     text-align: center;
+    scale: 0.9; /* make slightly smaller without breaking layout */
+    transition: transform 0.3s ease;
 } 
 .icon{
     width: 60%;
     justify-content: center;
     align-content: center;
     padding: 20px 20px;
-    margin: 20px 30px;
+    margin: 10px auto;
     background-color: white;
     border-radius: 25px 25px;
     
 }
-.text{
+.text, .text-skill{
     font-size: 31px;
     color: white;
+}
+
+.text-skill{
+    font-size: 25px;
 }
 /* hr{
     margin-bottom: 15px;
 } */
 .outerBox:hover{
     background-color: #92bcb5;
-
+    transform: scale(1.05); /* smooth hover zoom effect */
 }
 .outerBox:hover .text{
     color: black;
@@ -291,12 +297,11 @@ a{
 }
 
 .icon img{
-    
     margin-left: auto;
     margin-right: auto;
     display: block;
     
-    width: 130px;
+    width: 80px;
 }
 .flex{
     display: flex;
