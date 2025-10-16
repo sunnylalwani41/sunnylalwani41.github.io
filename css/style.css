@@ -6,7 +6,9 @@
 }
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
+
 .navbar{
     display: flex;
     
@@ -15,7 +17,6 @@ html{
     justify-content: center;
     position: sticky;
     top: 0px;
-    
 }
 
 .nav-list{
@@ -42,7 +43,7 @@ html{
 }
 .nav-list li{
     list-style: none;
-    padding: 26px 30px;
+    padding: 20px 30px;
     
 }
 .nav-list li a{
@@ -76,6 +77,12 @@ html{
     text-align: center;
     
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* =====Hand Burger Symbol ====== */
 .burger{
     display: none;
     position: absolute;
@@ -83,6 +90,16 @@ html{
     top: 15px;
     cursor: pointer;
 }
+
+.cross{
+    color: white;
+    font-size: 37px;
+}
+
+.burger .displayNone{
+    display: none;
+}
+
 .line{
     width: 32px;
     background-color: white;
@@ -132,12 +149,23 @@ html{
     color: white;
     line-height: 150%;
 }
-.small-text{
+.extra-small-text, .small-text{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 22px;
     color: white;
     line-height: 150%;
 }
+.extra-small-text{
+    font-size: 17px;
+}
+
+.cart .project-heading{
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0%;
+    margin-top: 0px;
+}
+
 .secondHalf{
     width: 50%;
 }
@@ -314,7 +342,7 @@ a{
 
 .project{
     display: grid;
-    gap: 0.5%;
+    gap: 25px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -337,10 +365,11 @@ a{
     border-radius: 10px;
     /* width: 80%; */
     display: block;
-    
 }
+
 .proj{
     width: 80%;
+    height: 200px;
     margin: auto;
 }
 .git{
@@ -404,7 +433,6 @@ a{
 }
 .footer{
     background-color: black;
-    
     width: 96vw;
     padding: 2%;
 }
@@ -412,19 +440,37 @@ a{
     color: #92bcb5;
 }
 .conn{
-    color: white;
+    /* color: white;
     padding: 16px 20px;
     border: 3px solid #92bcb5;
-    border-radius: 15px;
+    border-radius: 15px; */
     
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* left align content */
+    padding: 15px 20px;
+    border: 2px solid #92bcb5;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    width: fit-content; /* box expands based on content */
+    max-width: 100%; /* prevent overflow */
+    box-sizing: border-box;
 }
 
 .touch{
-    display: flex;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+    gap: 20px;
+    justify-content: start; /* align grid items to the left */
+    justify-items: ananchor-center;
+
+    /* display: flex;
+    margin: auto; */
     /* width: 35%; */
-    padding: 1%;
-    justify-content: space-around;
+    /* padding: 1%;
+    justify-content: space-around; */
 }
 
 
@@ -443,7 +489,7 @@ a{
 }
 .grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     justify-content: center;
     
@@ -455,7 +501,8 @@ a{
 .conn+div{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    /* justify-content: center; */
     margin: 15px 5px;
     text-decoration: none;
     color: #92bcb5;
@@ -469,11 +516,22 @@ a .conn{
 .conn:hover{
     background-color: white;
     border: 3px solid black;
+    border-color: #00ffff;
     color: black;
+    transition: 0.3s;
 }
-.text2:hover{
+
+.text2 {
+  color: #92bcb5;
+  font-weight: bold;
+  word-break: break-word; /* ✅ breaks long text to next line if needed */
+  white-space: normal; /* ✅ allows wrapping */
+  text-align: left;
+}
+
+/* .text2:hover{
     color: white;
-}
+} */
 
 .left-margin{
     margin-left: 4%;

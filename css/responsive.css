@@ -1,6 +1,11 @@
-@media only screen and (max-width:1210px){
+@media only screen and (max-width: 1535px){
     .grid{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media only screen and (max-width:1214px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 @media only screen and (max-width:1119px){
@@ -46,20 +51,26 @@
     .burger{
         display: block;
     }
+    .section {
+        scroll-margin-top: 120px; /* or tweak this to match your mobile nav height */
+    }
     .h-nav{
         height: 72px;
         
     }
     .v-nav{
-        opacity: 0;
+        display: none;
+    }
+    .logo img{
+        width: 63%;
     }
     .section{
         flex-direction: column-reverse;
     }
-    .linearAnimate{
+    /* .linearAnimate{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
     .firstSection{
         height: 125vh;
     }
@@ -77,6 +88,13 @@
     }
 }
 
+@media only screen and (max-width:942px){
+    .linearAnimate{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media only screen and (max-width:815px){
     .gitHubStats {
         flex-direction: column;
@@ -88,11 +106,13 @@
         margin-bottom: 17.5%;
     }
     
-    .touch{
+    /* .touch{
         display: grid;
-        grid-template-columns: repeat(2,130px);
-    }
+        grid-template-columns: repeat(2, 1fr);
+    } */
 }
+
+
 
 @media only screen and (max-width:715px){
     #dynamicText{
@@ -118,6 +138,9 @@
         padding: 18px;
         width: 55%;
     }
+    .logo img{
+        width: 69%;
+    }
     .outerBox{
         border-radius: 30px;
         padding: 15px 15px;
@@ -137,6 +160,9 @@
     .h-nav{
         height: 72px;
         width: 101vw;
+    }
+    .logo img{
+        width: 84%;
     }
 }
 @media only screen and (max-width:435px){
@@ -172,11 +198,20 @@
         flex-wrap: wrap;
         width: 95%;
     }
-    .touch{
-        /* width: 100%; */
+    /* .touch{
         display: grid;
-        grid-template-columns: repeat(1,130px);
+        grid-template-columns: repeat(1, 1fr);
+    } */
+
+    .touch {
+        grid-template-columns: 1fr; /* stack boxes vertically on small screens */
+        justify-items: start; /* left-align even in small screens */
     }
+
+    .conn {
+        width: 100%;
+    }
+
     .text{
         font-size: 27px;
     }
@@ -220,6 +255,9 @@
         height: 160vh;
 
     }
+    .logo img{
+        width: 97%;
+    }
 }
 
 
@@ -253,7 +291,9 @@
     height: 167vh;
    }
    
-   
+   .logo img{
+    width: 100%;
+   }
    
 }
 

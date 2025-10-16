@@ -10,8 +10,9 @@
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <script src="https://kit.fontawesome.com/e99a9eb445.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./img/logo.gif" type="image/x-icon">
-    <title>Sunny_Lalwani_Portfolio</title>
+    <title>Sunny Lalwani Portfolio</title>
 </head>
 
 <body>
@@ -29,14 +30,20 @@
         </ul>
         <div class="rightNav v-nav">
             <div>
-                <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
-                    href="./download/Sunny_Lalwani_fp04_424-Resume.pdf" download>Download Resume</a>
+                <a href="#" onclick="openAndDownload(); return false;">
+                    Download Resume
+                </a>
+                <!-- <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
+                    href="./download/Sunny_Lalwani_fp04_424-Resume.pdf" download></a> -->
             </div>
         </div>
         <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="burger-container">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <i class="fa-solid fa-xmark cross displayNone"></i>
         </div>
     </nav>
     <section class="firstSection background paddingTopBottom" id="home">
@@ -57,8 +64,12 @@
                             src="./img/icone-github-grise.png" alt="sunnylalwani41" height="60" width="60" /></a>
                 </div>
                 <div class="contact">
-                    <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
+                    <!-- <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
                         href="./download/Sunny_Lalwani_fp04_424-Resume.pdf" download>
+                        <div>Resume</div>
+                    </a> -->
+
+                    <a href="#" onclick="openAndDownload(); return false;">
                         <div>Resume</div>
                     </a>
                     <a href="#contact">
@@ -76,15 +87,7 @@
         <div class="parag">
             <p class="big-text black">About Me</p>
             <hr>
-            <p class="small-text black">I am a Java Backend Developer with hands-on experience in designing, developing,
-                deploying, and
-                maintaining projects. Adept at learning, unlearning, and relearning. Demonstrated capability of managing
-                clean,
-                efficient code. Skilled in solving Data Structures and Algorithms problems (200+ problems solved) and
-                capable of working
-                well both in collaboration and independently. I'm still enthusiastically grabbing on to multiple
-                programming languages,
-                frameworks, and principles that I can add to my skillset.</p>
+            <p class="small-text black">Dynamic and detail-oriented Java Backend Developer with over 2+ years of hands-on experience in designing, developing, and maintaining scalable web applications. Demonstrates strong expertise in Java, Spring Boot, Hibernate, JDBC, MySQL, and PostgreSQL, with a solid understanding of backend architecture and RESTful API development. Completed 1200+ hours of coding, showcasing commitment to continuous learning and technical excellence. Experienced in building both solo and collaborative projects, emphasizing clean code, modular design, and optimized performance. Skilled in using tools such as Maven, Swagger, Postman, and Git for efficient development and testing workflows. Adept at solving complex problems, analyzing requirements, and implementing effective backend solutions. Recognized for excellent teamwork, adaptability, and time management in fast-paced environments. Dedicated to delivering high-quality, secure, and maintainable software aligned with modern industry standards.</p>
         </div>
         <div class="thumb-img">
             <img src="./img/photo.jpg" alt="photo">
@@ -313,7 +316,7 @@
         </div>
     </section>
 
-        <section class="section">
+    <section class="section">
             <div class="paragStats">
                 <p class="big-text black center">GitHub Stats</p>
                 <hr>
@@ -346,16 +349,16 @@
                 <div class="cart">
                     <img src="./img/Your Door Food.jpg" alt="Your Door Food" class="proj">
                     <p class="heading">Your Door Food (REST API)</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Description:- </p>
-                    <p class="small-text justify">Your Door Food is an e-commerce online food ordering REST API. It
-                        performs all basic CRUD operations.</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Feature:- </p>
-                    <p class="small-text justify">Login & Logout | Signup | View all Products | Add Products to Cart |
+                    <p class="small-text justify project-heading">Description:- </p>
+                    <p class="extra-small-text justify">Your Door Food is an e-commerce online food ordering REST API.</p>
+                    <p class="small-text justify project-heading" >Feature:- </p>
+                    <p class="extra-small-text justify">Login & Logout | Signup | View all Products | Add Products to Cart |
                         Place Order... etc</p>
-                    <div class="tech small-text" style="margin-top: 0px;">
-                        Tech Used : <img src="./img/Java icon.png" alt="Java">
+                    <p class="small-text justify project-heading">Tech Stack:- </p>
+                    <p class="extra-small-text justify">Java | Spring Boot | Maven | JDBC | MySQL</p>
+                    <!-- <div class="tech small-text" style="margin-top: 0px;">
+                        Tech Stack :
+                        <img src="./img/Java icon.png" alt="Java">
                         <img src="./img/Spring Boot.png" alt="Spring Boot">
                         <img src="./img/Hibernate.png" alt="Hibernate">
                     </div>
@@ -364,7 +367,7 @@
                         <img src="./img/Sql icon.png" alt="Jdbc">
                         <img src="./img/Mysql icon.png" alt="Mysql">
 
-                    </div>
+                    </div> -->
                     <div class="git">
                         <button><a href="https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view"
                                 target="_blank">Demo Video</a></button>
@@ -374,21 +377,18 @@
                 </div>
                 <div class="cart">
                     <img src="./img/Sugar_Cosmetic.PNG" alt="Sugar_Cosmetic" class="proj">
-                    <p class="heading">SugarCosmetics.com CLONE</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Description:- </p>
-                    <p class="small-text justify"> Sugar Cosmetic is an ecommerce website. It sells cosmetic items to
-                        customers</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Feature:- </p>
-                    <p class="small-text justify">Login & Logout | Signup | Product Adding to Wishlist | Product Add to
-                        Cart | Filtering | Sorting | Discount Calculating | Payment Checkout... etc</p>
-
-                    <div class="tech small-text">
+                    <p class="heading">Cosmetic Platform</p>
+                    <p class="small-text justify project-heading">Description:- </p>
+                    <p class="extra-small-text justify">Developed an e-commerce website inspired by Sugar Cosmetics.</p>
+                    <p class="small-text justify project-heading">Feature:- </p>
+                    <p class="extra-small-text justify">Login & Logout | Signup | Product Adding to Wishlist & Cart | Payment Checkout... etc</p>
+                    <p class="small-text justify project-heading">Tech Stack:- </p>
+                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
+                    <!-- <div class="tech small-text">
                         Tech Used : <img src="./img/Html icon.png" alt="HTML">
                         <img src="./img/CSS icon.png" alt="css">
                         <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div>
+                    </div> -->
                     <div class="git">
                         <button><a href="https://famous-genie-605932.netlify.app/" target="_blank">Live
                                 Site</a></button>
@@ -399,15 +399,13 @@
                 <div class="cart">
                     <img src="./img/Baked_Delight.png" alt="Baked Delight" class="proj">
                     <p class="heading">Baked Delight (REST API)</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Description:- </p>
-                    <p class="small-text justify">Baked Delight is an Online Sweet Store. It performs all fundamental
-                        CRUD operations.</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Feature:- </p>
-                    <p class="small-text justify">Login & Logout | Signup | View all Products | View all Orders of a
-                        Customer | View all Customers... etc</p>
-                    <div class="tech small-text" style="margin-top: 0px;">
+                    <p class="small-text justify project-heading">Description:- </p>
+                    <p class="extra-small-text justify">Baked Delight is an e-commerce Online Sweet Store REST API.</p>
+                    <p class="small-text justify project-heading">Feature:- </p>
+                    <p class="extra-small-text justify">Login & Logout | Signup | View Products | View Orders History | View Customers... etc</p>
+                    <p class="small-text justify project-heading">Tech Stack:- </p>
+                    <p class="extra-small-text justify">Java | Spring Boot | Maven | JDBC | MySQL</p>
+                    <!-- <div class="tech small-text" style="margin-top: 0px;">
                         Tech Used : <img src="./img/Java icon.png" alt="Java">
                         <img src="./img/Spring Boot.png" alt="Spring Boot">
                         <img src="./img/Hibernate.png" alt="Hibernate">
@@ -417,7 +415,7 @@
                         <img src="./img/Sql icon.png" alt="Jdbc">
                         <img src="./img/Mysql icon.png" alt="Mysql">
 
-                    </div>
+                    </div> -->
                     <div class="git">
                         <button><a href="https://drive.google.com/file/d/1mRO8TqCNOjjizl28NQfV4pLC7l2pLIhw/view"
                                 target="_blank">Demo Video</a></button>
@@ -427,19 +425,19 @@
                 </div>
                 <div class="cart">
                     <img src="./img/Trip Advisor.PNG" alt="Trip Advisor" class="proj">
-                    <p class="heading">TripAdvisor.in CLONE</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Description:- </p>
-                    <p class="small-text justify"> Trip Advisor is an online traveling and hotel booking website.</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Feature:- </p>
-                    <p class="small-text justify"> Login & Logout | signup | Adding to Wishlist | Add to Cart |
+                    <p class="heading">Travelling Booking Platform</p>
+                    <p class="small-text justify project-heading">Description:- </p>
+                    <p class="extra-small-text justify"> Trip Advisor is an online traveling and hotel booking website.</p>
+                    <p class="small-text justify project-heading">Feature:- </p>
+                    <p class="extra-small-text justify"> Login & Logout | signup | Adding to Wishlist & Cart |
                         Filtering | Payment Checkout... etc</p>
-                    <div class="tech small-text">
+                    <p class="small-text justify project-heading">Tech Stack:- </p>
+                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
+                    <!-- <div class="tech small-text">
                         Tech Used : <img src="./img/Html icon.png" alt="HTML">
                         <img src="./img/CSS icon.png" alt="css">
                         <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div>
+                    </div> -->
                     <div class="git">
                         <button><a href="https://glittering-zabaione-8fa013.netlify.app" target="_blank">Live
                                 Site</a></button>
@@ -450,18 +448,18 @@
                 <div class="cart">
                     <img src="./img/Star_War_Landing_Page.PNG" alt="Star Warriors" class="proj">
                     <p class="heading">Star War</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Description:- </p>
-                    <p class="small-text justify"> This Website give the detail of star war warriors.</p>
-                    <p class="small-text justify"
-                        style="text-decoration: underline; font-weight: bold; margin-bottom: 0%;">Feature:- </p>
-                    <p class="small-text justify"> Search Bar | Dropdown Search items | Worriors Details | API Server
+                    <p class="small-text justify project-heading">Description:- </p>
+                    <p class="extra-small-text justify"> This Website give the detail of star war warriors.</p>
+                    <p class="small-text justify project-heading">Feature:- </p>
+                    <p class="extra-small-text justify"> Search Bar | Dropdown Search items | Worriors Details | API Server
                     </p>
-                    <div class="tech small-text" style="margin-top: 0px;">
+                    <p class="small-text justify project-heading">Tech Stack:- </p>
+                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
+                    <!-- <div class="tech small-text" style="margin-top: 0px;">
                         Tech Used : <img src="./img/Html icon.png" alt="HTML">
                         <img src="./img/CSS icon.png" alt="css">
                         <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div>
+                    </div> -->
                     <div class="git">
                         <button><a href="https://incredible-crostata-a30249.netlify.app/star%20wars"
                                 target="_blank">Live Site</a></button>
@@ -478,28 +476,28 @@
         <p class="big-text center">Sunny Lalwani</p>
         <div class="touch">
             <a href="https://www.linkedin.com/in/sunnylalwani41" target="_blank">
-                <div class="conn">Linkedin</div>
-                <div><img class="footerImage" src="./img/Linkedin.jpg" alt="Linkedin">
+                <div class="conn">
+                    <img class="footerImage" src="./img/Linkedin.jpg" alt="Linkedin">
                     <p class="text2">/sunnylalwani41</p>
                 </div>
             </a>
 
             <a href="https://github.com/sunnylalwani41" target="_blank">
-                <div class="conn">GitHub</div>
-                <div><img class="footerImage" src="./img/icone-github-grise.png" alt="GitHub">
+                <div class="conn">
+                    <img class="footerImage" src="./img/icone-github-grise.png" alt="GitHub">
                     <p class="text2">/sunnylalwani41</p>
                 </div>
             </a>
 
             <a href="mailto: sunnylalwani41@gmail.com" target="_blank">
-                <div class="conn">E-mail</div>
-                <div> <img class="footerImage" src="./img/Gmail.png" alt="E-mail" style="margin-right: 10px;">
+                <div class="conn">
+                    <img class="footerImage" src="./img/Gmail.png" alt="E-mail" style="margin-right: 10px;">
                     <p class="text2">sunnylalwani41@gmail.com</p>
                 </div>
             </a>
             <a href="tel:+91-8890918364" target="_blank">
-                <div class="conn">Phone</div>
-                <div> <img class="footerImage" src="./img/phone logo.png" alt="Phone" style="margin-right: 10px;">
+                <div class="conn">
+                    <img class="footerImage" src="./img/phone logo.png" alt="Phone" style="margin-right: 10px;">
                     <p class="text2">+91-8890918364</p>
                 </div>
             </a>
@@ -507,11 +505,6 @@
     </section>
 
 </body>
-
-<script>
-    GitHubCalendar(".calendar", "sunnylalwani41");
-    GitHubCalendar(".calendar", "sunnylalwani41", { responsive: true });
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="./JavaScript/index.js"></script>
