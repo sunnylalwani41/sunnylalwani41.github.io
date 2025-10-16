@@ -262,20 +262,34 @@ a{
     text-align: center;
     scale: 0.9; /* make slightly smaller without breaking layout */
     transition: transform 0.3s ease;
+    /* height: 180px; same height for all cards */
 } 
-.icon{
-    width: 60%;
+/* .icon{
+    max-width: 100%;
     justify-content: center;
     align-content: center;
     padding: 20px 20px;
     margin: 10px auto;
     background-color: white;
     border-radius: 25px 25px;
-    
+    overflow: hidden;
+} */
+.icon {
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* fixed uniform height for all icons */
 }
+
 .text, .text-skill{
     font-size: 31px;
     color: white;
+    word-wrap: break-word;
 }
 
 .text-skill{
@@ -296,13 +310,20 @@ a{
     color: black;
 }
 
-.icon img{
+/* .icon img{
     margin-left: auto;
     margin-right: auto;
     display: block;
     
     width: 80px;
+} */
+
+.icon img {
+    max-height: 80px; /* ensures all fit neatly inside */
+    width: auto;      /* keep aspect ratio */
+    display: block;
 }
+
 .flex{
     display: flex;
 
