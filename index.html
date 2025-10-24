@@ -1,517 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
-    <script src="https://kit.fontawesome.com/e99a9eb445.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="./img/logo.gif" type="image/x-icon">
-    <title>Sunny Lalwani Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+  <script src="https://kit.fontawesome.com/e99a9eb445.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./img/photo.jpg" type="image/x-icon">
+  <title>Sunny Lalwani Professional Portfolio Website | Web Developer</title>
 </head>
 
 <body>
-    <nav class="navbar background h-nav">
-        <ul class="nav-list v-nav">
-            <div class="logo"><img src="./img/logo.gif" alt="logo"></div>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills"> Skills</a></li>
-            <li><a href="#experience"> Experience</a></li>
-            <li><a href="#project"> Project</a></li>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Sunny Lalwani</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" onclick="openAndDownload(); return false;" class="resume-btn">Resume</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-            <li><a href="#contact">Contact</a></li>
+  <!-- Floating Theme Button -->
+  <div class="theme-toggle" id="theme-btn" title="Switch theme">
+    <i class="fas fa-moon"></i>
+  </div>
 
-        </ul>
-        <div class="rightNav v-nav">
-            <div>
-                <a href="#" onclick="openAndDownload(); return false;">
-                    Download Resume
-                </a>
-                <!-- <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
-                    href="./download/Sunny_Lalwani_fp04_424-Resume.pdf" download></a> -->
-            </div>
+  <!-- Home -->
+  <section id="home" class="section fade-in section1"> 
+  <div class="home-content">
+    <img src="./img/photo.jpg" alt="Sunny Lalwani" class="profile-pic floating" />
+    <h1>Hello, I'm <span class="highlight">Sunny Lalwani</span></h1>
+    
+    <h3 class="typing-text">I'm a <span id="typed-text"></span><span class="cursor">|</span></h3>
+
+    <p>Passionate about developing robust and scalable web applications leveraging Java, JSP, Spring, and MySQL to deliver efficient and seamless user experiences.</p>
+
+    <div class="social-section">
+      <p class="find-text">Find me on</p>
+      <div class="social-badges">
+        <a href="https://linkedin.com/in/sunnylalwani41" target="_blank" class="social-btn linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/sunnylalwani41" target="_blank" class="social-btn github">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <a href="#" onclick="openAndDownload(); return false;" class="btn-resume">Download Resume</a>
+  </div>
+</section>
+
+  <!-- About -->
+  <section id="about" class="section fade-in section2">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        Passionate and results-driven <strong>Java Backend Developer</strong> with over <strong>2 years of hands-on experience</strong> in building scalable and high-performance web applications. Proficient in <strong>Java, Spring Boot, Hibernate, JDBC, MySQL, and PostgreSQL</strong>, with a strong grasp of backend architecture and RESTful API design.
+      </p>
+      <p>
+        Completed <strong>1200+ hours of coding</strong> and delivered multiple <strong>solo and collaborative projects</strong>, demonstrating a commitment to writing clean, maintainable, and efficient code. Experienced in using <strong>Maven, Swagger, Postman, and Git</strong> for development and testing workflows.
+      </p>
+      <p>
+        Recognized for <strong>problem-solving, teamwork, and adaptability</strong> in fast-paced environments. Dedicated to crafting secure, optimized, and industry-standard backend solutions that create meaningful user experiences.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="section fade-in section3">
+    <div class="skills-header">
+      <h2>Technical Skills & Tools</h2>
+    </div>
+
+    <div class="skills-grid">
+      <!-- skills -->
+      <div class="skill"><img src="./img/Java icon.png" alt="Java" /><span>Java</span></div>
+      <div class="skill"><img src="./img/Spring.png" alt="Spring" /><span>Spring</span></div>
+      <div class="skill"><img src="./img/Spring Boot.png" alt="Spring Boot" /><span>Spring Boot</span></div>
+      <div class="skill"><img src="./img/Hibernate.png" alt="Hibernate" /><span>Hibernate</span></div>
+      <div class="skill"><img src="./img/Sql icon.png" alt="JDBC" /><span>SQL</span></div>
+      <div class="skill"><img src="./img/Html icon.png" alt="HTML" /><span>HTML</span></div>
+      <div class="skill"><img src="./img/JavaScript icon.png" alt="JavaScript" /><span>JavaScript</span></div>
+      <div class="skill"><img src="./img/CSS icon.png" alt="HTML & CSS" /><span>CSS</span></div>
+      <div class="skill"><img src="./img/xml_logo.jpg" alt="XML" /><span>XML</span></div>
+      <div class="skill"><img src="./img/Python.png" alt="Python" /><span>Python</span></div>
+
+      <!-- Tools -->
+      <div class="skill"><img src="./img/Apache Maven-dark.svg" alt="Maven" /><span>Maven</span></div>
+      <div class="skill"><img src="./img/Swagger-logo.png" alt="Swagger" /><span>Swagger</span></div>
+      <div class="skill"><img src="./img/Mysql icon.png" alt="MySQL" /><span>MySQL</span></div>
+      <div class="skill"><img src="./img/Postgresql_elephant.svg" alt="PostgreSQL" /><span>PostgreSQL</span></div>
+      <div class="skill"><img src="./img/icone-github-grise.png" alt="Git" /><span>Git & GitHub</span></div>
+      <div class="skill"><img src="./img/sts icon.png" alt="STS" /><span>STS</span></div>
+      <div class="skill"><img src="./img/VS icon.png" alt="Visual Studio" /><span>Visual Studio</span></div>
+      <div class="skill"><img src="./img/IntelliJ_IDEA_Icon.svg.png" alt="IntelliJ" /><span>IntelliJ</span></div>
+      <div class="skill"><img src="./img/Postman.png" alt="Postman" /><span>Postman</span></div>
+      <div class="skill"><img src="./img/AWS.jpg" alt="AWS" /><span>AWS</span></div>
+      <div class="skill"><img src="./img/Lombok.jpg" alt="Lombok" /><span>Lombok</span></div>
+      <div class="skill"><img src="./img/Heroku.jpg" alt="Heroku" /><span>Heroku</span></div>
+      <div class="skill"><img src="./img/Netlify-Logo.png" alt="Netlify" /><span>Netlify</span></div>
+      <div class="skill"><img src="./img/jaspersoft.png" alt="jaspersoft" /><span>jaspersoft</span></div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section fade-in section4">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="exp-item">
+        <div class="exp-content">
+          <h3>Java Developer — Sunbase</h3>
+          <span class="exp-duration">Sep 2024 – Oct 2025</span>
+          <p>
+            Designing and developing scalable backend systems using Java, Spring, Hibernate, and MySQL.
+            Collaborating with cross-functional teams to deliver efficient and maintainable web applications.
+          </p>
+          <div class="tech-stack">
+            <span>Java</span><span>XML</span><span>Spring</span><span>Hibernate</span><span>MySQL</span>
+          </div>
         </div>
-        <div class="burger">
-            <div class="burger-container">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <i class="fa-solid fa-xmark cross displayNone"></i>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-content">
+          <h3>Java Developer — Digital Add Worlds</h3>
+          <span class="exp-duration">Nov 2023 – Sep 2024</span>
+          <p>
+            Managed project execution by distributing tasks among team members and tracking progress effectively. Contributed to both 
+            backend and frontend development, deploying projects on cloud environments and preparing detailed project reports.
+          </p>
+          <div class="tech-stack">
+            <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span><span>GCP</span><span>GoDaddy</span>
+          </div>
         </div>
-    </nav>
-    <section class="firstSection background paddingTopBottom" id="home">
-        <div class="main-box">
-            <div class="firstHalf">
-                <p class="big-text">Hello
-                    <img class="hand" src="./img/Hand_Wave.gif" alt="Hey">, Sunny Lalwani
-                </p>
-                <hr>
-                <div id="dynamicText">
-                    <p class="medium-text">I am <span class="multiText"> </span></p>
-                </div>
-                <div class="connect">
+      </div>
+    </div>
+  </section>
+  
+  <!-- GitHub Section -->
+  <section id="github" class="section fade-in section5">
+    <h2>GitHub Activity</h2>
 
-                    <a href="https://linkedin.com/in/sunnylalwani41" target="blank"><img align="center"
-                            src="./img/Linkedin.jpg" alt="sunnylalwani41" height="55" width="55" /></a>
-                    <a href="https://github.com/sunnylalwani41" target="blank"><img align="center"
-                            src="./img/icone-github-grise.png" alt="sunnylalwani41" height="60" width="60" /></a>
-                </div>
-                <div class="contact">
-                    <!-- <a onclick="window.open('https://drive.google.com/file/d/1jL1A3NrkywKRL7eA8ds4My_VmClxLMlG/view?usp=sharing')"
-                        href="./download/Sunny_Lalwani_fp04_424-Resume.pdf" download>
-                        <div>Resume</div>
-                    </a> -->
+    <div class="github-stats">
+      <div class="stats-row">
+        <img 
+          src="https://github-readme-stats.vercel.app/api?username=sunnylalwani41&show_icons=true&theme=transparent&hide_border=true&rank_icon=github"
+          alt="GitHub Stats"
+          class="stat-card small-card" />
 
-                    <a href="#" onclick="openAndDownload(); return false;">
-                        <div>Resume</div>
-                    </a>
-                    <a href="#contact">
-                        <div style="text-decoration: none;">Contact Me</div>
-                    </a>
-                </div>
-            </div>
-            <div class="secondHalf">
-                <img src="./img/code.gif" alt="codingAnimation" class="master">
-            </div>
+        <img 
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&layout=compact&theme=transparent&hide_border=true"
+          alt="Top Languages"
+          class="stat-card small-card" />
+      </div>
+
+      <div class="graph-container">
+        <h3>Contribution Graph</h3>
+        <img
+          src="https://github-readme-activity-graph.vercel.app/graph?username=sunnylalwani41&theme=tokyo-night&hide_border=true"
+          alt="GitHub Contribution Graph"
+          class="stat-card graph-card" />
+      </div>
+
+      <div class="calendar-container">
+        <h3>Contribution Calendar</h3>
+        <div id="calendar" class="calendar react-activity-calendar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section fade-in section6">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./img/Your Door Food.jpg" alt="Your Door Food" />
+          <div class="project-overlay">
+            <a href="https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view" target="_blank" class="view-btn">Demo Video</a>
+            <a href="https://github.com/sunnylalwani41/Your_Door_Food_REST_API" target="_blank" class="code-btn">View Code</a>
+          </div>
         </div>
-
-    </section>
-    <section class="section" id="about">
-        <div class="parag">
-            <p class="big-text black">About Me</p>
-            <hr>
-            <p class="small-text black">Dynamic and detail-oriented Java Backend Developer with over 2+ years of hands-on experience in designing, developing, and maintaining scalable web applications. Demonstrates strong expertise in Java, Spring Boot, Hibernate, JDBC, MySQL, and PostgreSQL, with a solid understanding of backend architecture and RESTful API development. Completed 1200+ hours of coding, showcasing commitment to continuous learning and technical excellence. Experienced in building both solo and collaborative projects, emphasizing clean code, modular design, and optimized performance. Skilled in using tools such as Maven, Swagger, Postman, and Git for efficient development and testing workflows. Adept at solving complex problems, analyzing requirements, and implementing effective backend solutions. Recognized for excellent teamwork, adaptability, and time management in fast-paced environments. Dedicated to delivering high-quality, secure, and maintainable software aligned with modern industry standards.</p>
+        <div class="project-content">
+          <h3>Your Door Food | REST API</h3>
+          <p>Online food ordering REST API for managing users, restaurants, and orders.</p>
+          <div class="tech-stack">
+            <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span><span>Maven</span>
+          </div>
         </div>
-        <div class="thumb-img">
-            <img src="./img/photo.jpg" alt="photo">
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./img/Baked_Delight.png" alt="Baked Delight" />
+          <div class="project-overlay">
+            <a href="https://drive.google.com/file/d/1mRO8TqCNOjjizl28NQfV4pLC7l2pLIhw/view" target="_blank" class="view-btn">Demo Video</a>
+            <a href="https://github.com/sunnylalwani41/Baked_Delight_Rest_API" target="_blank" class="code-btn">View Code</a>
+          </div>
         </div>
-    </section>
-
-    <section class="section" id="skills">
-        <div class="parag">
-            <p class="big-text black center">Skills</p>
-            <hr>
-            <div class="grid linearAnimate">
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/Java icon.png" alt="Java">
-                    </div>
-                    <h2 class="text-skill">Java</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Spring Boot.png" alt="Spring Boot">
-                    </div>
-                    <h2 class="text-skill">Spring Boot</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Spring.png" alt="Spring">
-                    </div>
-                    <h2 class="text-skill">Spring</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Hibernate.png" alt="Hibernate">
-                    </div>
-                    <h2 class="text-skill">Hibernate</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Sql icon.png" alt="SQL">
-                    </div>
-                    <h2 class="text-skill">SQL</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Html icon.png" alt="HTML">
-                    </div>
-                    <h2 class="text-skill">HTML</h2>
-                </div>
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/CSS icon.png" alt="CSS">
-                    </div>
-                    <h2 class="text-skill">CSS</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/JavaScript icon.png" alt="JavaScript">
-                    </div>
-                    <h2 class="text-skill">JavaScript</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Python.png" alt="Python">
-                    </div>
-                    <h2 class="text-skill">Python</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/xml_photo.jpg" alt="XML">
-                    </div>
-                    <h2 class="text-skill">XML</h2>
-                </div>
-
-            </div>
-
-
+        <div class="project-content">
+          <h3>Baked Delight | REST API</h3>
+          <p>E-commerce API for sweet store management and online ordering system.</p>
+          <div class="tech-stack">
+            <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span><span>Maven</span>
+          </div>
         </div>
+      </div>
 
-    </section>
-
-
-    <section class="section" id="tools">
-        <div class="parag">
-            <p class="big-text black center">Tools</p>
-            <hr>
-            <div class="grid linearAnimate">
-
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/Mysql icon.png" alt="Mysql">
-                    </div>
-                    <h2 class="text-skill">Mysql</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/sts icon.png" alt="STS">
-                    </div>
-                    <!-- <h2 class="text-skill">Spring Tool Suite</h2> -->
-                    <h2 class="text-skill">STS</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/VS icon.png" alt="VS Code">
-                    </div>
-                    <h2 class="text-skill">Visual Studio</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/IntelliJ_IDEA_Icon.svg.png" alt="IntelliJ_IDEA">
-                    </div>
-                    <h2 class="text-skill">IntelliJ</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Postman.png" alt="Postman">
-                    </div>
-                    <h2 class="text-skill">Postman</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/AWS.jpg" alt="AWS">
-                    </div>
-                    <h2 class="text-skill">AWS</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Maven.jpg" alt="Maven">
-                    </div>
-                    <h2 class="text-skill">Maven</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Lombok.jpg" alt="Lombok">
-                    </div>
-                    <h2 class="text-skill">Lombok</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Swagger-logo.png" alt="Swagger">
-                    </div>
-                    <h2 class="text-skill">Swagger</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Heroku.jpg" alt="Heroku">
-                    </div>
-                    <h2 class="text-skill">Heroku</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/Netlify-Logo.png" alt="Netlify">
-                    </div>
-                    <h2 class="text-skill">Netlify</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-
-                        <img src="./img/GitHub icon.png" alt="GitHub">
-                    </div>
-                    <h2 class="text-skill">GitHub</h2>
-                </div>
-
-                <div class="outerBox">
-                    <div class="icon">
-                        <img src="./img/jaspersoft.png" alt="Jaspersoft">
-                    </div>
-                    <h2 class="text-skill">Jaspersoft</h2>
-                </div>
-
-            </div>
-
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./img/Sugar_Cosmetic.PNG" alt="Cosmetic Platform" />
+          <div class="project-overlay">
+            <a href="https://famous-genie-605932.netlify.app/" target="_blank" class="view-btn">View Project</a>
+            <a href="https://github.com/sunnylalwani41/Sugar_Cosmetics_Website_Clone" target="_blank" class="code-btn">View Code</a>
+          </div>
         </div>
-
-    </section>
-
-    <section class="section" id="experience">
-        <div class="parag">
-            <p class="big-text black center">Experience</p>
-            <hr>
-            <div class="experience">
-                <h2 class="text black">Sunbasedata LLC, FL, USA</h2>
-                <p class="small-text black">Java Developer</p>
-                <p class="small-text black">09/2024 to 10/2025</p>
-                <p class="small-text black">Job Role:</p>
-                <ul class="small-text black left-margin">
-                    <li>Work with team members.</li>
-                    <li>Track project progress.</li>
-                    <li>Write backend API code and MySQL queries.</li>
-                    <li>Prepare project reports.</li>
-                </ul>
-            </div>
-
-            <div class="experience">
-                <h2 class="text black">Digital Add World, Jaipur</h2>
-                <p class="small-text black">Java Developer</p>
-                <p class="small-text black">11/2023 to 09/2024</p>
-                <p class="small-text black">Job Role:</p>
-                <ul class="small-text black left-margin">
-                    <li>Distribute the project work among the team member.</li>
-                    <li>Track the project process and deploy the project in cloud.</li>
-                    <li>Write code for backend and frontend.</li>
-                    <li>Prepare the report for project.</li>
-                </ul>
-            </div>
+        <div class="project-content">
+          <h3>Cosmetic Platform</h3>
+          <p>E-commerce website inspired by Sugar Cosmetics for product browsing.</p>
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="section">
-            <div class="paragStats">
-                <p class="big-text black center">GitHub Stats</p>
-                <hr>
-                <div class="gitHubStats">
-                        <a href="https://github.com/sunnylalwani41"><img
-                                src="https://github-readme-stats.vercel.app/api?username=sunnylalwani41" alt="GitHub Stats"></a>
-        
-                        <a href="https://github.com/sunnylalwani41"><img
-                                src="https://github-readme-streak-stats.herokuapp.com?user=sunnylalwani41&show_icons=true"
-                                alt="GitHub Stats"></a>
-        
-                        <a href="https://github.com/sunnylalwani41"><img
-                                src="https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&langs_count=8"
-                                alt="GitHub Stats"></a>
-                </div>
-            </div>
-            
-    </section>
-    <section class="section">
-            <div id="calendar" class="calendar react-activity-calendar">
-                <!-- this is the div where your calander will apear -->
-            </div>
-    </section>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./img/Trip Advisor.PNG" alt="Trip Advisor" />
+          <div class="project-overlay">
+            <a href="https://glittering-zabaione-8fa013.netlify.app/" target="_blank" class="view-btn">View Project</a>
+            <a href="https://github.com/sunnylalwani41/Trip_Advisor_Clone_website" target="_blank" class="code-btn">View Code</a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Travel Booking Platform</h3>
+          <p>Developed a travel website inspired by TripAdvisor for hotel and trip booking.</p>
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
 
-    <section class="section" id="project">
-        <div class="parag center topMargin">
-            <p class="big-text black">Project</p>
-            <hr>
-            <div class="project paddingBottom11 projMargin">
-                <div class="cart">
-                    <img src="./img/Your Door Food.jpg" alt="Your Door Food" class="proj">
-                    <p class="heading">Your Door Food (REST API)</p>
-                    <p class="small-text justify project-heading">Description:- </p>
-                    <p class="extra-small-text justify">Your Door Food is an e-commerce online food ordering REST API.</p>
-                    <p class="small-text justify project-heading" >Feature:- </p>
-                    <p class="extra-small-text justify">Login & Logout | Signup | View all Products | Add Products to Cart |
-                        Place Order... etc</p>
-                    <p class="small-text justify project-heading">Tech Stack:- </p>
-                    <p class="extra-small-text justify">Java | Spring Boot | Maven | JDBC | MySQL</p>
-                    <!-- <div class="tech small-text" style="margin-top: 0px;">
-                        Tech Stack :
-                        <img src="./img/Java icon.png" alt="Java">
-                        <img src="./img/Spring Boot.png" alt="Spring Boot">
-                        <img src="./img/Hibernate.png" alt="Hibernate">
-                    </div>
-                    <div class="tech small-text" style="margin-top: 5px;">
-                        <img src="./img/Maven.jpg" alt="Maven">
-                        <img src="./img/Sql icon.png" alt="Jdbc">
-                        <img src="./img/Mysql icon.png" alt="Mysql">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./img/Star_War_Landing_Page.PNG" alt="Star War" />
+          <div class="project-overlay">
+            <a href="https://incredible-crostata-a30249.netlify.app/star%20wars" target="_blank" class="view-btn">View Project</a>
+            <a href="https://github.com/sunnylalwani41/Star_War" target="_blank" class="code-btn">View Code</a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Star Wars</h3>
+          <p>Informational website showcasing Star Wars characters and lore.</p>
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
 
-                    </div> -->
-                    <div class="git">
-                        <button><a href="https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view"
-                                target="_blank">Demo Video</a></button>
-                        <button><a href="https://github.com/sunnylalwani41/Your_Door_Food_REST_API.git"
-                                target="_blank">Git Repo</a></button>
-                    </div>
-                </div>
-                <div class="cart">
-                    <img src="./img/Sugar_Cosmetic.PNG" alt="Sugar_Cosmetic" class="proj">
-                    <p class="heading">Cosmetic Platform</p>
-                    <p class="small-text justify project-heading">Description:- </p>
-                    <p class="extra-small-text justify">Developed an e-commerce website inspired by Sugar Cosmetics.</p>
-                    <p class="small-text justify project-heading">Feature:- </p>
-                    <p class="extra-small-text justify">Login & Logout | Signup | Product Adding to Wishlist & Cart | Payment Checkout... etc</p>
-                    <p class="small-text justify project-heading">Tech Stack:- </p>
-                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
-                    <!-- <div class="tech small-text">
-                        Tech Used : <img src="./img/Html icon.png" alt="HTML">
-                        <img src="./img/CSS icon.png" alt="css">
-                        <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div> -->
-                    <div class="git">
-                        <button><a href="https://famous-genie-605932.netlify.app/" target="_blank">Live
-                                Site</a></button>
-                        <button><a href="https://github.com/sunnylalwani41/Sugar_Cosmetics_Website_Clone" target="_blank">Git
-                                Repo</a></button>
-                    </div>
-                </div>
-                <div class="cart">
-                    <img src="./img/Baked_Delight.png" alt="Baked Delight" class="proj">
-                    <p class="heading">Baked Delight (REST API)</p>
-                    <p class="small-text justify project-heading">Description:- </p>
-                    <p class="extra-small-text justify">Baked Delight is an e-commerce Online Sweet Store REST API.</p>
-                    <p class="small-text justify project-heading">Feature:- </p>
-                    <p class="extra-small-text justify">Login & Logout | Signup | View Products | View Orders History | View Customers... etc</p>
-                    <p class="small-text justify project-heading">Tech Stack:- </p>
-                    <p class="extra-small-text justify">Java | Spring Boot | Maven | JDBC | MySQL</p>
-                    <!-- <div class="tech small-text" style="margin-top: 0px;">
-                        Tech Used : <img src="./img/Java icon.png" alt="Java">
-                        <img src="./img/Spring Boot.png" alt="Spring Boot">
-                        <img src="./img/Hibernate.png" alt="Hibernate">
-                    </div>
-                    <div class="tech small-text" style="margin-top: 5px;">
-                        <img src="./img/Maven.jpg" alt="Maven">
-                        <img src="./img/Sql icon.png" alt="Jdbc">
-                        <img src="./img/Mysql icon.png" alt="Mysql">
+    </div>
+  </section>
 
-                    </div> -->
-                    <div class="git">
-                        <button><a href="https://drive.google.com/file/d/1mRO8TqCNOjjizl28NQfV4pLC7l2pLIhw/view"
-                                target="_blank">Demo Video</a></button>
-                        <button><a href="https://github.com/sunnylalwani41/Online_Sweet_Store_Rest_API.git"
-                                target="_blank">Git Repo</a></button>
-                    </div>
-                </div>
-                <div class="cart">
-                    <img src="./img/Trip Advisor.PNG" alt="Trip Advisor" class="proj">
-                    <p class="heading">Travelling Booking Platform</p>
-                    <p class="small-text justify project-heading">Description:- </p>
-                    <p class="extra-small-text justify"> Trip Advisor is an online traveling and hotel booking website.</p>
-                    <p class="small-text justify project-heading">Feature:- </p>
-                    <p class="extra-small-text justify"> Login & Logout | signup | Adding to Wishlist & Cart |
-                        Filtering | Payment Checkout... etc</p>
-                    <p class="small-text justify project-heading">Tech Stack:- </p>
-                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
-                    <!-- <div class="tech small-text">
-                        Tech Used : <img src="./img/Html icon.png" alt="HTML">
-                        <img src="./img/CSS icon.png" alt="css">
-                        <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div> -->
-                    <div class="git">
-                        <button><a href="https://glittering-zabaione-8fa013.netlify.app" target="_blank">Live
-                                Site</a></button>
-                        <button><a href="https://github.com/sunnylalwani41/Trip_Advisor_Clone_website"
-                                target="_blank">Git Repo</a></button>
-                    </div>
-                </div>
-                <div class="cart">
-                    <img src="./img/Star_War_Landing_Page.PNG" alt="Star Warriors" class="proj">
-                    <p class="heading">Star War</p>
-                    <p class="small-text justify project-heading">Description:- </p>
-                    <p class="extra-small-text justify"> This Website give the detail of star war warriors.</p>
-                    <p class="small-text justify project-heading">Feature:- </p>
-                    <p class="extra-small-text justify"> Search Bar | Dropdown Search items | Worriors Details | API Server
-                    </p>
-                    <p class="small-text justify project-heading">Tech Stack:- </p>
-                    <p class="extra-small-text justify">HTML | CSS | JavaScript</p>
-                    <!-- <div class="tech small-text" style="margin-top: 0px;">
-                        Tech Used : <img src="./img/Html icon.png" alt="HTML">
-                        <img src="./img/CSS icon.png" alt="css">
-                        <img src="./img/JavaScript icon.png" alt="javascript">
-                    </div> -->
-                    <div class="git">
-                        <button><a href="https://incredible-crostata-a30249.netlify.app/star%20wars"
-                                target="_blank">Live Site</a></button>
-                        <button><a href="https://github.com/sunnylalwani41/Star_War" target="_blank">Git
-                                Repo</a></button>
-                    </div>
-                </div>
-            </div>
+  <!-- Contact -->
+  <section id="contact" class="section fade-in section7">
+    <h2 class="section-title">Let's Connect</h2>
+    <p class="contact-subtitle">Reach out for opportunities, collaborations, or just to say hi 👋</p>
+
+    <div class="contact-container">
+      <!-- Left side: Contact Info -->
+      <div class="contact-info-box">
+        <h3>Contact Info</h3>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:sunnylalwani41@gmail.com">sunnylalwani41@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>India</p>
+          </div>
         </div>
 
-    </section>
-    <section class="footer" id="contact">
-        <p class="big-text cyan center">Get in touch</p>
-        <p class="big-text center">Sunny Lalwani</p>
-        <div class="touch">
-            <a href="https://www.linkedin.com/in/sunnylalwani41" target="_blank">
-                <div class="conn">
-                    <img class="footerImage" src="./img/Linkedin.jpg" alt="Linkedin">
-                    <p class="text2">/sunnylalwani41</p>
-                </div>
-            </a>
-
-            <a href="https://github.com/sunnylalwani41" target="_blank">
-                <div class="conn">
-                    <img class="footerImage" src="./img/icone-github-grise.png" alt="GitHub">
-                    <p class="text2">/sunnylalwani41</p>
-                </div>
-            </a>
-
-            <a href="mailto: sunnylalwani41@gmail.com" target="_blank">
-                <div class="conn">
-                    <img class="footerImage" src="./img/Gmail.png" alt="E-mail" style="margin-right: 10px;">
-                    <p class="text2">sunnylalwani41@gmail.com</p>
-                </div>
-            </a>
-            <a href="tel:+91-8890918364" target="_blank">
-                <div class="conn">
-                    <img class="footerImage" src="./img/phone logo.png" alt="Phone" style="margin-right: 10px;">
-                    <p class="text2">+91-8890918364</p>
-                </div>
-            </a>
+        <h4 class="social-title">Social</h4>
+        <div class="social-links">
+          <a href="https://github.com/sunnylalwani41" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/sunnylalwani41" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
         </div>
-    </section>
+      </div>
 
+      <!-- Right side: Contact Form -->
+      <div class="contact-form-box">
+        <h3>Send Me a Message</h3>
+        <form id="contact-form" action="https://formsubmit.co/sunnylalwani41@gmail.com" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+
+          <!-- Message area -->
+          <p id="form-status" class="form-status"></p>
+
+          <!-- Hidden fields (optional but useful) -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New message from portfolio!">
+          <input type="hidden" name="_template" value="table">
+        </form>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  Made with <span class="heart">❤</span> by Sunny Lalwani
+</footer>
+
+
+  <script src="./javascript/script.js"></script>
 </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="./JavaScript/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js"></script>
-
 </html>
-
