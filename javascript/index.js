@@ -3,6 +3,15 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const hamburgerIcon = hamburger.querySelector("i");
 
+let closeNavbar = () =>{
+  navLinks.classList.remove("open");
+  hamburgerIcon.classList.remove("fa-xmark");
+
+  if(!hamburgerIcon.classList.contains("fa-bars")){
+    hamburgerIcon.classList.add("fa-bars");
+  }
+}
+
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   hamburgerIcon.classList.toggle("fa-bars");
@@ -10,8 +19,8 @@ hamburger.addEventListener('click', () => {
 });
 
 // Theme toggle
-const themeBtn = document.getElementById('theme-btn');
-const themeIcon = themeBtn.querySelector('i');
+const themeBtns = document.querySelectorAll('.theme-btn');
+
 
 // github
 function updateGitHubCards(theme) {
@@ -22,18 +31,30 @@ function updateGitHubCards(theme) {
   cards[0].src = `https://github-readme-stats.vercel.app/api?username=sunnylalwani41&show_icons=true&theme=${colorTheme}`;
   cards[1].src = `https://github-readme-stats.vercel.app/api/top-langs/?username=sunnylalwani41&layout=compact&theme=${colorTheme}`;
   cards[2].src = `https://github-readme-streak-stats.herokuapp.com/?user=sunnylalwani41&theme=${colorTheme}`;
-  cards[3].src = `https://github-readme-activity-graph.vercel.app/graph?username=sunnylalwani41&theme=${graphTheme}`;
+  // cards[3].src = `https://github-readme-activity-graph.vercel.app/graph?username=sunnylalwani41&theme=${graphTheme}`;
 }
 
+let changeIconForTheme = () => {
+  for(let i = 0; i < themeBtns.length; i++){
+    let themeBtn = themeBtns[i];
+    const themeIcon = themeBtn.querySelector('i');
 
-themeBtn.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark');
-  themeIcon.classList.toggle('fa-moon');
-  themeIcon.classList.toggle('fa-sun');
+    themeIcon.classList.toggle('fa-moon');
+    themeIcon.classList.toggle('fa-sun');
+  }
+}
 
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  updateGitHubCards(isDark ? 'dark' : 'light');
-});
+for(let i = 0; i < themeBtns.length; i++){
+  let themeBtn = themeBtns[i];
+
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    changeIconForTheme();
+
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateGitHubCards(isDark ? 'dark' : 'light');
+  });
+}
 
 // Scroll highlight + smooth offset fix
 const sections = document.querySelectorAll('section');
@@ -171,4 +192,13 @@ form.addEventListener("submit", async (e) => {
     statusText.textContent = "";
     statusText.className = "form-status";
   }, 4000);
+});
+
+// when click on the menu item then close the menu
+const navList = document.querySelectorAll("#nav-links li"); // ✅ select all menu links
+
+navList.forEach(item => {
+    item.addEventListener("click", () => {
+        closeNavbar();
+    });
 });

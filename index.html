@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
@@ -23,43 +24,51 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#" onclick="openAndDownload(); return false;" class="resume-btn">Resume</a></li>
+      <li>
+        <a href="#" onclick="openAndDownload(); return false;" class="resume-btn">Resume</a>
+      </li>
+      <li class="theme-btn theme-toggle-li">
+        <button class="theme-toggle-btn" title="Switch Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </li>
     </ul>
+
     <div class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
     </div>
   </nav>
-
+  
   <!-- Floating Theme Button -->
-  <div class="theme-toggle" id="theme-btn" title="Switch theme">
+  <div class="theme-toggle theme-btn" title="Switch theme">
     <i class="fas fa-moon"></i>
   </div>
 
   <!-- Home -->
   <section id="home" class="section fade-in section1"> 
-  <div class="home-content">
-    <img src="./img/photo.jpg" alt="Sunny Lalwani" class="profile-pic floating" />
-    <h1>Hello, I'm <span class="highlight">Sunny Lalwani</span></h1>
-    
-    <h3 class="typing-text">I'm a <span id="typed-text"></span><span class="cursor">|</span></h3>
+    <div class="home-content">
+      <img src="./img/photo.jpg" alt="Sunny Lalwani" class="profile-pic floating" />
+      <h1>Hello, I'm <span class="highlight">Sunny Lalwani</span></h1>
+      
+      <h3 class="typing-text">I'm a <span id="typed-text"></span><span class="cursor">|</span></h3>
 
-    <p>Passionate about developing robust and scalable web applications leveraging Java, JSP, Spring, and MySQL to deliver efficient and seamless user experiences.</p>
+      <p>Passionate about developing robust and scalable web applications leveraging Java, JSP, Spring, and MySQL to deliver efficient and seamless user experiences.</p>
 
-    <div class="social-section">
-      <p class="find-text">Find me on</p>
-      <div class="social-badges">
-        <a href="https://linkedin.com/in/sunnylalwani41" target="_blank" class="social-btn linkedin">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/sunnylalwani41" target="_blank" class="social-btn github">
-          <i class="fab fa-github"></i> GitHub
-        </a>
+      <div class="social-section">
+        <p class="find-text">Find me on</p>
+        <div class="social-badges">
+          <a href="https://linkedin.com/in/sunnylalwani41" target="_blank" class="social-btn linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/sunnylalwani41" target="_blank" class="social-btn github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
       </div>
-    </div>
 
-    <a href="#" onclick="openAndDownload(); return false;" class="btn-resume">Download Resume</a>
-  </div>
-</section>
+      <a href="#" onclick="openAndDownload(); return false;" class="btn-resume">Download Resume</a>
+    </div>
+  </section>
 
   <!-- About -->
   <section id="about" class="section fade-in section2">
@@ -81,7 +90,7 @@
   <!-- Skills -->
   <section id="skills" class="section fade-in section3">
     <div class="skills-header">
-      <h2>Technical Skills & Tools</h2>
+      <h2>Skills</h2>
     </div>
 
     <div class="skills-grid">
@@ -96,7 +105,15 @@
       <div class="skill"><img src="./img/CSS icon.png" alt="HTML & CSS" /><span>CSS</span></div>
       <div class="skill"><img src="./img/xml_logo.jpg" alt="XML" /><span>XML</span></div>
       <div class="skill"><img src="./img/Python.png" alt="Python" /><span>Python</span></div>
+    </div>
+  </section>
 
+  <section id="skills" class="section fade-in section3">
+    <div class="skills-header">
+      <h2>Tools</h2>
+    </div>
+
+    <div class="skills-grid">
       <!-- Tools -->
       <div class="skill"><img src="./img/Apache Maven-dark.svg" alt="Maven" /><span>Maven</span></div>
       <div class="skill"><img src="./img/Swagger-logo.png" alt="Swagger" /><span>Swagger</span></div>
@@ -189,10 +206,6 @@
       <div class="project-card">
         <div class="project-image">
           <img src="./img/Your Door Food.jpg" alt="Your Door Food" />
-          <div class="project-overlay">
-            <a href="https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view" target="_blank" class="view-btn">Demo Video</a>
-            <a href="https://github.com/sunnylalwani41/Your_Door_Food_REST_API" target="_blank" class="code-btn">View Code</a>
-          </div>
         </div>
         <div class="project-content">
           <h3>Your Door Food | REST API</h3>
@@ -200,16 +213,16 @@
           <div class="tech-stack">
             <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span><span>Maven</span>
           </div>
+          <div class="project-buttons">
+            <a href="https://drive.google.com/file/d/1URK-TPSboVi9UFAYG8AROuHEMNi-4vzr/view" target="_blank" class="code-btn">Video</a>
+            <a href="https://github.com/sunnylalwani41/Your_Door_Food_REST_API" target="_blank" class="code-btn">Code</a>
+          </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-image">
           <img src="./img/Baked_Delight.png" alt="Baked Delight" />
-          <div class="project-overlay">
-            <a href="https://drive.google.com/file/d/1mRO8TqCNOjjizl28NQfV4pLC7l2pLIhw/view" target="_blank" class="view-btn">Demo Video</a>
-            <a href="https://github.com/sunnylalwani41/Baked_Delight_Rest_API" target="_blank" class="code-btn">View Code</a>
-          </div>
         </div>
         <div class="project-content">
           <h3>Baked Delight | REST API</h3>
@@ -217,16 +230,16 @@
           <div class="tech-stack">
             <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span><span>Maven</span>
           </div>
+          <div class="project-buttons">
+            <a href="https://drive.google.com/file/d/1mRO8TqCNOjjizl28NQfV4pLC7l2pLIhw/view" target="_blank" class="code-btn">Video</a>
+            <a href="https://github.com/sunnylalwani41/Baked_Delight_Rest_API" target="_blank" class="code-btn">Code</a>
+          </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-image">
           <img src="./img/Sugar_Cosmetic.PNG" alt="Cosmetic Platform" />
-          <div class="project-overlay">
-            <a href="https://famous-genie-605932.netlify.app/" target="_blank" class="view-btn">View Project</a>
-            <a href="https://github.com/sunnylalwani41/Sugar_Cosmetics_Website_Clone" target="_blank" class="code-btn">View Code</a>
-          </div>
         </div>
         <div class="project-content">
           <h3>Cosmetic Platform</h3>
@@ -234,16 +247,16 @@
           <div class="tech-stack">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
+          <div class="project-buttons">
+            <a href="https://famous-genie-605932.netlify.app/" target="_blank" class="code-btn">Website</a>
+            <a href="https://github.com/sunnylalwani41/Sugar_Cosmetics_Website_Clone" target="_blank" class="code-btn">Code</a>
+          </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-image">
           <img src="./img/Trip Advisor.PNG" alt="Trip Advisor" />
-          <div class="project-overlay">
-            <a href="https://glittering-zabaione-8fa013.netlify.app/" target="_blank" class="view-btn">View Project</a>
-            <a href="https://github.com/sunnylalwani41/Trip_Advisor_Clone_website" target="_blank" class="code-btn">View Code</a>
-          </div>
         </div>
         <div class="project-content">
           <h3>Travel Booking Platform</h3>
@@ -251,16 +264,16 @@
           <div class="tech-stack">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
+          <div class="project-buttons">
+            <a href="https://glittering-zabaione-8fa013.netlify.app/" target="_blank" class="code-btn">Website</a>
+            <a href="https://github.com/sunnylalwani41/Trip_Advisor_Clone_website" target="_blank" class="code-btn">Code</a>
+          </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-image">
           <img src="./img/Star_War_Landing_Page.PNG" alt="Star War" />
-          <div class="project-overlay">
-            <a href="https://incredible-crostata-a30249.netlify.app/star%20wars" target="_blank" class="view-btn">View Project</a>
-            <a href="https://github.com/sunnylalwani41/Star_War" target="_blank" class="code-btn">View Code</a>
-          </div>
         </div>
         <div class="project-content">
           <h3>Star Wars</h3>
@@ -268,9 +281,12 @@
           <div class="tech-stack">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
+          <div class="project-buttons">
+            <a href="https://incredible-crostata-a30249.netlify.app/star%20wars" target="_blank" class="code-btn">Website</a>
+            <a href="https://github.com/sunnylalwani41/Star_War" target="_blank" class="code-btn">Code</a>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -341,6 +357,6 @@
 </footer>
 
 
-  <script src="./javascript/script.js"></script>
+  <script src="./javascript/index.js"></script>
 </body>
 </html>

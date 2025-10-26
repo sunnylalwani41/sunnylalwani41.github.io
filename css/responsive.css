@@ -1,0 +1,87 @@
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(240px, 313px));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 313px;
+  }
+}
+
+@media (max-width: 365px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: -100%;
+    top: 60px;
+    flex-direction: column;
+    background: var(--card-bg);
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: right 0.3s;
+  }
+
+  .nav-links.open {
+    right: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    color: var(--text);
+  }
+
+  .section {
+    padding: 90px 20px;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stat-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .graph-card,
+  .calendar {
+    width: 100%;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .theme-toggle-li{
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 454px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  }
+}
+
+/* 453 */
